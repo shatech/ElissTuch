@@ -1,6 +1,6 @@
 #
 # 6to4 Configuration Script
-# Author: github.com/shatech
+# Author: github.com/Azumi67
 # This is for educational use and my own learning, please provide me with feedback if possible
 # This script is designed to simplify the configuration of 6to4 tunnels.
 #
@@ -79,15 +79,58 @@ def display_logo2():
     \_____|\__,_|_|\__,_|\___|
 """ + colorama.Style.RESET_ALL
     print(logo2)
-
-
+    
+def display_logo():
+    colorama.init()  
+    logo = """ 
+\033[1;96m          
+                 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⢀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⡀⠤⠒⠊⠉⠀⠀⠀⠀⠈⠁⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀\033[1;93m⠀⢀⠔⠉⠀⠀⠀⠀⢀⡠⠤⠐⠒⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⣀⡠⠤⠤⠀⠀⠂⠐\033[1;96m⠀⠠⢤⠎⢑⡭⣽⣳⠶⣖⡶⣤⣖⣬⡽⡭⣥⣄\033[1;93m⠒⠒⠀⠐⠁⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⢀⠴⠊⠁⠀⠀⠀⠀⡀⠀\033[1;96m⣠⣴⡶⣿⢏⡿⣝⡳⢧⡻⣟⡻⣞⠿⣾⡽⣳⣯⣳⣞⡻⣦⡀⠀⠀\033[1;93m⠀⠈⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢨⠀⠀⠀⢀⠤⠂⠁\033[1;96m⢠⣾⡟⣧⠿⣝⣮⣽⢺⣝⣳⡽⣎⢷⣫⡟⡵⡿⣵⢫⡷⣾⢷⣭⢻⣦⡄\033[1;93m⠤⡸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠘⡄⠀⠀⠓⠂⠀\033[1;96m⣴⣿⢷⡿⣝⣻⣏⡷⣾⣟⡼⣣⢟⣼⣣⢟⣯⢗⣻⣽⣏⡾⡽⣟⣧⠿⡼⣿⣦\033[1;93m⣃⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢀⠇⠀⠀⠀⠀\033[1;96m⣼⣿⢿⣼⡻⣼⡟⣼⣧⢿⣿⣸⡧⠿⠃⢿⣜⣻⢿⣤⣛⣿⢧⣻⢻⢿⡿⢧⣛⣿⣧⠀\033[1;93m⠛⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⢸⠁⠀⠀⠀⠀\033[1;96m⣼⣻⡿⣾⣳⡽⣾⣽⡷⣻⣞⢿⣫⠕⣫⣫⣸⢮⣝⡇⠱⣏⣾⣻⡽⣻⣮⣿⣻⡜⣞⡿⣷\033[1;93m⢀⠀⠀⠑⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠘⣧⠀⠀⠀\033[1;96m⣼⣳⢯⣿⣗⣿⣏⣿⠆⣟⣿⣵⢛⣵⡿⣿⣏⣟⡾⣜⣻⠀⢻⡖⣷⢳⣏⡶⣻⡧⣟⡼⣻⡽⣇\033[1;93m⠁⠢⡀⠠⡀⠑⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠈⢦⠀\033[1;96m⣰⣯⣟⢯⣿⢾⣹⢾⡟⠰⣏⡾⣾⣟⡷⣿⣻⣽⣷⡶⣟⠿⡆⠀⢻⣝⣯⢷⣹⢧⣿⢧⡻⣽⣳⢽⡀\033[1;93m⠀⠈⠀⠈⠂⡼⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⡀⢵\033[1;96m⣟⣾⡟⣾⣿⣻⢽⣺⠇⠀⣿⡱⢿⡞⣵⡳⣭⣿⡜⣿⣭⣻⣷⠲⠤⢿⣾⢯⢯⣛⢿⣳⡝⣾⣿⢭⡇⠀\033[1;93m⠀⠀⠀⡰⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢀⠤⠊⠀\033[1;96m⣼⢻⣿⢞⣯⢿⡽⣸⣹⡆⠀⢷⣏⢯⣿⣧⣛⠶⣯⢿⣽⣷⣧⣛⣦⠀⠀⠙⢿⣳⣽⣿⣣⢟⡶⣿⣫⡇⠀⠀\033[1;93m⠀⠰⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⣠⠖⠁⠀⠀⡄\033[1;96m⡿⣯⣷⣻⡽⣞⡟⣿⣿⣟⠉⠈⢯⣗⣻⣕⢯⣛⡞⣯⢮⣷⣭⡚⠓⠋⠀⠀⠀⠈⠉⣿⡽⣎⠷⡏⡷⣷⠀⠀⠀\033[1;93m⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠐⣇⠀⠀⢀⠊\033[1;96m⣼⣇⣿⡗⣿⣽⣷⡿⣿⣱⡿⣆⠀⠀⠙⠒⠛⠓⠋⠉⠉⠀⠀⠀\033[1;91m⢠⣴⣯⣶⣶⣤⡀\033[1;96m ⠀⣿⣟⡼⣛⡇⣟⣿⡆\033[1;93m⡀⠀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠘⢤⠀⠃⠌\033[1;96m⣸⣿⢾⡽⣹⣾⠹⣞⡵⣳⣽⡽⣖⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;91m⣤⣖⣻⣾⣝⢿⡄\033[1;96m ⢸⣯⢳⣏⡿⣏⣾⢧\033[1;93m⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠘⠀⠈⠀\033[1;96m⡿⣿⣻⡽⣽⣿⢧⠌⠉\033[1;91m⠉⣴⣿⣿⣫⣅⡀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣛⠿⠿⢟⢙⡄⠙\033[1;96m ⠘⣯⢳⣞⡟⣯⢾⣻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⡇⠀⠀⠀\033[1;96m⡿⣿⣿⢵⣫⣿⣆⠁⠂\033[1;91m⣼⡿⢹⣿⡿⠽⠟⢢⠀⠀⠀⠀⠀⠀⠀⢹⠀⢄⢀⠀⡿⠀⠀\033[1;96m ⢰⣯⢷⣺⣏⣯⢻⡽⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⡇⠀⢀⠠\033[1;96m⣿⣿⢾⣛⡶⣽⠈⢓⠀\033[1;91m⢻⠁⢸⠇⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠑⠠⠤⠔⠂⠀⠀\033[1;96m ⢸⣿⢮⣽⠿⣜⣻⡝⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠑⠊⠁\033[1;96m⢠⡷⡇⣿⣿⢼⣹⡀⠀⠑⢄⠀\033[1;91m⠀⠃⠌⣁⠦⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⠀⠀\033[1;96m⢀⣿⢾⡝⣾⡽⣺⢽⣹⣽⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣻⢽⣻⡟⣮⣝⡷⢦⣄⣄⣢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣯⢿⡺⣟⢷⡹⢾⣷⡞⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣟⡿⣎⢿⡽⣳⢮⣿⣹⣾⣯⡝⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⣀⣴⡟⣿⢧⣏⢷⡟⣮⠝⢿⣹⣯⡽⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣯⡷⣏⣾⡳⣽⢺⣷⡹⣟⢶⡹⣾⡽⣷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠔⣾⢯⣷⡇⣿⢳⣎⢿⡞⣽⢦⣼⡽⣧⢻⡽⣆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣟⢾⡷⣭⣿⢳⣭⢻⣷⡻⣜⣻⡵⣻⡼⣿⠾⠫\033[1;96m⣽⣟⣶⣶⣶⠒⠒⠂⠉⠀\033[1;96m⢸⣽⢺⡷⣷⣯⢗⣮⣟⢾⢧⣻⠼⡿⣿⢣⡟⣼⣆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⣝⣾⢳⢧⣟⡳⣎⣿⣿⣱⢏⣾⣽⣳⠟\033[1;92m⠁⠀⡌⠈\033[1;96m⢹⡯⠟⠛⠀⠀⠀⠀⠀⠈\033[1;96m⣷⢻⣼⣽⣿⡾⣼⣏⣾⣻⡜⣯⣷⢿⣟⣼⡳⣞⣦⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⢿⡸⣎⠿⣾⡏⣷⣉⣷⣿⢹⣎⡿\033[1;92m⠎⡎⠀⠀⠀⡇⠀⣾⠱⡀⠀⠀⠀⠀⠀⠀⠀⠈⣹⠉⡏⠀\033[1;96m⠹⣾⣏⢹⣶⢹⣶⢿⡾⣿⢶⣿⣸⠾⣇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⣾⢫⣞⡽⣯⢿⣹⡟⣶⣹⢷⣻\033[1;92m⡷⠊⠀⡜⠀⠀⠀⠀⢱⠀⣿⡀⠈⠢⢀⣀⣀⠠⠄⠒⢈⡏⡰⠀⠀⠀\033[1;96m⠀⣿⡜⣮⢟⡼⣻⡵⣻⣗⠾⣟⣯⢻⣆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣴⣿⢣⣟⡾⣽⣯⢳⣿⡹⣖⣿⡳\033[1;92m⠋⠀⠀⡸⠀⠀⠀⠀⠀⢸⠀⢺⢂⠀⠀⠀⠀⠀⠀⠀⢠⡺⡱⠁⠀⠀⠀⠀\033[1;96m⢹⣧⣻⢮⡳⣝⡷⢧⣻⢯⢿⣻⣳⢞⡆⠀⠀⠀
+⠀⠀⠀⠀⢀⡾⣽⣣⡿⣼⣏⡿⣼⣳⡯⢷⣹⣯⠇\033[1;92m⠀⠀⢠⠁⠀⠀⠀⠀⠀⠈⡆⠈⢹⡰⠤⡀⠀⠀⠀⢠⡼⢱⠁⠀⠀⠀⠀⠀⠀\033[1;96m⠹⣿⣿⣱⣻⣼⣏⢷⣯⣿⡳⣿⣎⢿⡀⠀⠀
+⠀⠀⠀⠀⣾⣽⠷⣿⣵⡿⣼⡟⣭⣷⡟⣿⢯⡏⠀\033[1;92m⠀⠀⠘⠀⠀⠒⠈⢡⠀⠀⢗⢄⠀⠃⠀⠺⢁⢈⠥⠋⣀⠇⠀⠀⠀⠀⠀⠀⡀⠀\033[1;96m⠈⠙⢿⣳⢞⣽⢯⣞⣾⣯⡝⣿⡾⡇⠀⠀⠀
+           \033[96m __    \033[1;94m  ________  \033[1;92m ____  ____ \033[1;93m ___      ___  \033[1;91m __     
+      \033[96m     /""\   \033[1;94m ("      "\ \033[1;92m("  _||_ " |\033[1;93m|"  \    /"  | \033[1;91m|" \    
+      \033[96m    /    \   \033[1;94m \___/   :)\033[1;92m|   (  ) : |\033[1;93m \   \  //   | \033[1;91m||  |   
+      \033[96m   /' /\  \   \033[1;94m  /  ___/ \033[1;92m(:  |  | . )\033[1;93m /\   \/.    |\033[1;91m |:  |   
+     \033[96m   //  __'  \  \033[1;94m //  \__  \033[1;92m \  \__/  / \033[1;93m|: \.        | \033[1;91m|.  |   
+      \033[96m  /  /  \   \ \033[1;94m(:   / "\ \033[1;92m /\  __  /\ \033[1;93m|.  \    /:  |\033[1;91m /\  |\  
+      \033[96m(___/    \___) \033[1;94m\_______)\033[1;92m(__________)\033[1;93m|___|\__/|___|\033[1;91m(__\_|_) \033[1;92mAuthor: github.com/Azumi67  \033[1;96m                                                          
+"""
+    print(logo)
 def main_menu():
     try:
         while True:
-            
+            display_logo()
             border = "\033[93m+" + "="*70 + "+\033[0m"
             content = "\033[93m║            ▌║█║▌│║▌│║▌║▌█║ \033[92mMain Menu\033[93m  ▌│║▌║▌│║║▌█║▌                  ║"
-            footer = " \033[92m    Open issues at \033[34mhttps://github.com/Shatech\033[0m "
+            footer = " \033[92m    Open issues at \033[34mhttps://github.com/Azumi67/6TO4-GRE-IPIP-SIT\033[0m "
 
             border_length = len(border) - 2
             centered_content = content.center(border_length)
@@ -265,16 +308,16 @@ def gre6tapk_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -294,7 +337,7 @@ def gre6tapk_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -308,7 +351,7 @@ def kharej_gre6tap_tunnel():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -339,16 +382,16 @@ def gre6tapi_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -369,7 +412,7 @@ def gre6tapi_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -384,7 +427,7 @@ def iran_gre6tap_tunnel():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -587,16 +630,16 @@ def ipip6rn_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -616,7 +659,7 @@ def ipip6rn_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n"
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -650,7 +693,7 @@ def ipip6rn_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -666,26 +709,26 @@ def spn_ipip_grek1():
     ipip6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -741,24 +784,24 @@ def spn_ipip_grek2():
     ipip6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
   
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -820,16 +863,16 @@ def ipip6rn_iran1_tunnel():
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -850,7 +893,7 @@ def ipip6rn_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n"
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -864,7 +907,7 @@ def ipip6rn_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -898,26 +941,26 @@ def spn_ipip_grei1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -974,24 +1017,24 @@ def spn_ipip_grei2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1112,23 +1155,23 @@ def ipip64_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip6 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -1151,7 +1194,7 @@ def ipip64_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n" 
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n" 
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1177,7 +1220,7 @@ def ip6ip64_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -1201,24 +1244,24 @@ def kharej1_ip6ip64_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1285,26 +1328,26 @@ def spn_ipipk_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1362,24 +1405,24 @@ def spn_ipipk_2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1470,23 +1513,23 @@ def ip6ip64_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -1509,7 +1552,7 @@ def ip6ip64_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n"
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1537,7 +1580,7 @@ def ip6ip64_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -1560,24 +1603,24 @@ def iran1_ip6ip64_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1646,26 +1689,26 @@ def spn_ipipi_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1724,24 +1767,24 @@ def spn_ipipi_2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1928,13 +1971,13 @@ def ipip64_m2_tunnel():
     command = f"echo '/sbin/modprobe fou' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link add name elissip6 type ipip remote {remote_ip} local {local_ip} encap fou encap-sport auto encap-dport 5555' >> {file_path}"
+    command = f"echo 'ip link add name azumip6 type ipip remote {remote_ip} local {local_ip} encap fou encap-sport auto encap-dport 5555' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add 192.168.1.1/30 dev elissip6' >> {file_path}"
+    command = f"echo 'ip addr add 192.168.1.1/30 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
 
@@ -1945,7 +1988,7 @@ def ipip64_m2_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n" 
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n" 
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -1961,7 +2004,7 @@ def ip6ip64_m2_kharej():
     ip_address = "192.168.1.2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -1985,23 +2028,23 @@ def kharej1_m2_ip6ip64_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "link", "add", "name", "eliss", "type", "sit", "remote", remote_ip, "local", local_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "add", "name", "azumi", "type", "sit", "remote", remote_ip, "local", local_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
-    subprocess.run(["ip", "addr", "add", "192.168.1.1/30", "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", "192.168.1.1/30", "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip link add name eliss type sit remote {remote_ip} local {local_ip}\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add 192.168.1.1/30 dev eliss\n")
+        f.write(f"ip link add name azumi type sit remote {remote_ip} local {local_ip}\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add 192.168.1.1/30 dev azumi\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2065,26 +2108,26 @@ def spn_m2_ipipk_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2143,26 +2186,26 @@ def spn_m2_sitk_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2221,24 +2264,24 @@ def spn_m2_ipipk_2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2298,24 +2341,24 @@ def spn_m2_sitk_2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.1", "remote", "192.168.1.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.1 remote 192.168.1.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2444,13 +2487,13 @@ def ip6ip64_m2_iran_tunnel():
     command = f"echo '/sbin/modprobe fou' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissip6 type ipip remote {remote_ip} local {local_ip} encap fou encap-sport auto encap-dport 5555' >> {file_path}"
+    command = f"echo 'ip link add name azumip6 type ipip remote {remote_ip} local {local_ip} encap fou encap-sport auto encap-dport 5555' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add 192.168.1.2/30 dev elissip6' >> {file_path}"
+    command = f"echo 'ip addr add 192.168.1.2/30 dev azumip6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip6 up' >> {file_path}"
+    command = f"echo 'ip link set azumip6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
     command = f"chmod +x {file_path}"
@@ -2460,7 +2503,7 @@ def ip6ip64_m2_iran_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip6 mtu {mtu_value}\n"
         with open('/etc/sys.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2479,7 +2522,7 @@ def ip6ip64_m2_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -2502,22 +2545,22 @@ def iran1_m2_ip6ip64_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "link", "add", "name", "eliss", "type", "sit", "remote", remote_ip, "local", local_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "add", "name", "azumi", "type", "sit", "remote", remote_ip, "local", local_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
-    subprocess.run(["ip", "addr", "add", "192.168.1.2/30", "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", "192.168.1.2/30", "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip link add name eliss type sit remote {remote_ip} local {local_ip}\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add 192.168.1.2/30 dev eliss\n")
+        f.write(f"ip link add name azumi type sit remote {remote_ip} local {local_ip}\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add 192.168.1.2/30 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2581,26 +2624,26 @@ def spn_m2_ipipi_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2659,26 +2702,26 @@ def spn_m2_siti_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2737,24 +2780,24 @@ def spn_m2_ipipi_2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2816,24 +2859,24 @@ def spn_m2_siti_2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "192.168.1.2", "remote", "192.168.1.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 192.168.1.2 remote 192.168.1.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -2968,16 +3011,16 @@ def tap6rn_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -2997,7 +3040,7 @@ def tap6rn_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -3011,7 +3054,7 @@ def tap6rn_kharej1():
     interval = 20
     create_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', '2002:831a::2'], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -3027,26 +3070,26 @@ def spn_ip4_gretapk1():
     tap6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3102,24 +3145,24 @@ def spn_ip4_gretapk2():
     tap6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
   
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3181,16 +3224,16 @@ def tap6rn_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -3211,7 +3254,7 @@ def tap6rn_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -3225,7 +3268,7 @@ def tap6rn_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -3259,26 +3302,26 @@ def spn_ip4_gretapi1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3335,24 +3378,24 @@ def spn_ip4_gretapi2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3474,26 +3517,26 @@ def spn_ipk_tap1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3551,24 +3594,24 @@ def spn_ipk_tap2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3659,26 +3702,26 @@ def spn_tapipi_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3737,24 +3780,24 @@ def spn_tapipi_2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -3890,16 +3933,16 @@ def gree6rn_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -3919,7 +3962,7 @@ def gree6rn_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -3932,7 +3975,7 @@ def gree6rn_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -3948,26 +3991,26 @@ def spn_ip4_grek1():
     gree6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4023,24 +4066,24 @@ def spn_ip4_grek2():
     gree6rn_kharej1()
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
   
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4102,16 +4145,16 @@ def gree6rn_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -4132,7 +4175,7 @@ def gree6rn_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -4146,7 +4189,7 @@ def gree6rn_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -4180,26 +4223,26 @@ def spn_ip4_grei1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4256,24 +4299,24 @@ def spn_ip4_grei2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4395,26 +4438,26 @@ def spn_ipk_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4472,24 +4515,24 @@ def spn_ipk_2():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4580,26 +4623,26 @@ def spn_ipi_1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -4658,24 +4701,24 @@ def spn_ipi_2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5041,26 +5084,26 @@ def ip4_simpk1():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5114,24 +5157,24 @@ def ip4_simk2():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5221,26 +5264,26 @@ def ip4_simpi1():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5295,25 +5338,25 @@ def ip4_simpi2():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5429,26 +5472,26 @@ def ip6_simk1_n():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5504,24 +5547,24 @@ def ip6_simk2_n():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5611,26 +5654,26 @@ def ip6_simpi1_n():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5686,25 +5729,25 @@ def ip6_simpi2_n():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")    
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -5853,7 +5896,7 @@ def config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -5886,7 +5929,7 @@ def config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -5919,7 +5962,7 @@ def config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -5952,7 +5995,7 @@ def config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -5983,20 +6026,20 @@ def espan_simpk1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m") 
     config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6005,7 +6048,7 @@ def espan_simpk1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6064,18 +6107,18 @@ def espan_simpk2():
     config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6083,7 +6126,7 @@ def espan_simpk2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6176,20 +6219,20 @@ def espan_simpi1():
 
     config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6197,7 +6240,7 @@ def espan_simpi1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6256,18 +6299,18 @@ def espan_simpi2():
 
     config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6276,7 +6319,7 @@ def espan_simpi2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6396,7 +6439,7 @@ def config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -6429,7 +6472,7 @@ def config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -6462,7 +6505,7 @@ def config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -6495,7 +6538,7 @@ def config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -6527,20 +6570,20 @@ def espan_simk1_n():
 
     config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6548,7 +6591,7 @@ def espan_simk1_n():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6607,18 +6650,18 @@ def espan_simk2_n():
     config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6626,7 +6669,7 @@ def espan_simk2_n():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6719,20 +6762,20 @@ def espan_simpi1_n():
 
     config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6740,7 +6783,7 @@ def espan_simpi1_n():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6799,18 +6842,18 @@ def espan_simpi2_n():
 
     config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", local_ip, "remote", remote_ip, "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local {local_ip} remote {remote_ip} seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -6819,7 +6862,7 @@ def espan_simpi2_n():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6877,23 +6920,23 @@ def gre6tap_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -6916,7 +6959,7 @@ def gre6tap_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n" 
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n" 
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -6941,7 +6984,7 @@ def gre6tap_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -6964,24 +7007,24 @@ def kharej_gretap6_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7050,7 +7093,7 @@ def gretap6_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -7069,23 +7112,23 @@ def gretap6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -7108,7 +7151,7 @@ def gretap6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GREtap6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7136,24 +7179,24 @@ def iran_gretap6_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7309,20 +7352,20 @@ def espan_ipk_gre1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m") 
     config_strongswank_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7330,7 +7373,7 @@ def espan_ipk_gre1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7390,18 +7433,18 @@ def espan_ipk_gre2():
     config_strongswank_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7409,7 +7452,7 @@ def espan_ipk_gre2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7502,20 +7545,20 @@ def espan_ipi_gre1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswani_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7523,7 +7566,7 @@ def espan_ipi_gre1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7583,18 +7626,18 @@ def espan_ipi_gre2():
     config_strongswani_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7602,7 +7645,7 @@ def espan_ipi_gre2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7722,16 +7765,16 @@ def gre6tapna_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -7753,7 +7796,7 @@ def gre6tapna_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6tap]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n" 
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n" 
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7772,7 +7815,7 @@ def gre6tapna_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -7792,20 +7835,20 @@ def espan_ipk_grena1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m") 
     config_strongswank_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7813,7 +7856,7 @@ def espan_ipk_grena1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7873,18 +7916,18 @@ def espan_ipk_grena2():
     config_strongswank_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -7892,7 +7935,7 @@ def espan_ipk_grena2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -7950,7 +7993,7 @@ def gretap6na_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -7970,16 +8013,16 @@ def gretap6na_iran_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link add name elissg6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
+    command = f"echo 'ip link add name azumig6 type ip6gretap local {local_ip} remote {remote_ip}' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -8003,7 +8046,7 @@ def gretap6na_iran_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GREtap6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8059,20 +8102,20 @@ def espan_ipi_grena1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswani_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8080,7 +8123,7 @@ def espan_ipi_grena1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8140,18 +8183,18 @@ def espan_ipi_grena2():
     config_strongswani_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8159,7 +8202,7 @@ def espan_ipi_grena2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8294,16 +8337,16 @@ def gree6rn_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -8323,7 +8366,7 @@ def gree6rn_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -8336,7 +8379,7 @@ def gree6rn_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -8355,7 +8398,7 @@ def config_strongswank_gren(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
   
 conn erspan
   left=%defaultroute
@@ -8389,7 +8432,7 @@ def config_strongswank_gren4(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -8423,7 +8466,7 @@ def config_strongswani_gren(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -8458,7 +8501,7 @@ def config_strongswani_gren4(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -8492,20 +8535,20 @@ def espan2_ipk_ngre1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswank_gren4(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8513,7 +8556,7 @@ def espan2_ipk_ngre1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8572,18 +8615,18 @@ def espan2_ipk_ngre2():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswank_gren(psk)
   
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8591,7 +8634,7 @@ def espan2_ipk_ngre2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8653,16 +8696,16 @@ def gree6rn_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -8683,7 +8726,7 @@ def gree6rn_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -8697,7 +8740,7 @@ def gree6rn_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -8733,20 +8776,20 @@ def espan2_ipi_ngre1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswani_gren4(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8754,7 +8797,7 @@ def espan2_ipi_ngre1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8814,18 +8857,18 @@ def espan2_ipi_ngre2():
     config_strongswani_gren(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -8833,7 +8876,7 @@ def espan2_ipi_ngre2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -8886,7 +8929,7 @@ done
 def espan4_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "2001:db8::1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -8898,7 +8941,7 @@ def espan4_ping():
 def espan3_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "2001:db8::2"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -8910,7 +8953,7 @@ def espan3_ping():
 def espan_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.200.2.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -8923,7 +8966,7 @@ def espan_ping():
 def espan2_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.200.1.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -9003,7 +9046,7 @@ def config_strongswan(local_ip, local_subnet, remote_ip, remote_subnet, psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -9036,7 +9079,7 @@ def config_strongswank_gre62(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
  
 conn erspan
@@ -9071,7 +9114,7 @@ def config_strongswank_gre6(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -9105,7 +9148,7 @@ def config_strongswani_gre6(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -9139,7 +9182,7 @@ def config_strongswani_gre62(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 
 conn erspan
   left=%defaultroute
@@ -9234,20 +9277,20 @@ def espan_ipk_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswank_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -9255,7 +9298,7 @@ def espan_ipk_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -9316,18 +9359,18 @@ def espan_ipk_version2():
     config_strongswank_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::1", "remote", "2002:831a::2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::1 remote 2002:831a::2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -9335,7 +9378,7 @@ def espan_ipk_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -9428,20 +9471,20 @@ def espan_ipi_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongswani_gre62(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -9449,7 +9492,7 @@ def espan_ipi_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -9510,18 +9553,18 @@ def espan_ipi_version2():
     config_strongswani_gre6(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "ip6erspan", "local", "2002:831a::2", "remote", "2002:831a::1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type ip6erspan local 2002:831a::2 remote 2002:831a::1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -9529,7 +9572,7 @@ def espan_ipi_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -9851,19 +9894,19 @@ def remove_ipip64():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissip1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip1 > /dev/null", shell=True)
-        subprocess.run("ip link set dev elissip2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip2 > /dev/null", shell=True)
-        subprocess.run("ip link set dev elissip3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip3 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -9913,11 +9956,11 @@ def remove_ipip61():
         sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissip1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip1 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -9967,11 +10010,11 @@ def remove_ipip62():
         sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissip2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip2 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10021,11 +10064,11 @@ def remove_ipip63():
         sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissip3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip3 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10221,19 +10264,19 @@ def remove_gre64():
         subprocess.run("rm /etc/systemd/system/ping_ip3.service > /dev/null 2>&1", shell=True)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev elissg61 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg61 > /dev/null", shell=True)
-        subprocess.run("ip link set dev elissg62 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg62 > /dev/null", shell=True)
-        subprocess.run("ip link set dev elissg63 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg63 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig61 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig61 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig62 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig62 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig63 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig63 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10283,11 +10326,11 @@ def remove_gre61():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev elissg61 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg61 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig61 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig61 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10337,11 +10380,11 @@ def remove_gre62():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev elissg62 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg62 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig62 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig62 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10391,11 +10434,11 @@ def remove_gre63():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev elissg63 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg63 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig63 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig63 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -10603,16 +10646,16 @@ def remove_private6():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss4 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss4 > /dev/null", shell=True)
-        subprocess.run("ip link set dev eliss5 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss5 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi4 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi4 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi5 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi5 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -10655,8 +10698,8 @@ def remove_private1():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss1 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss1 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi1 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi1 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -10699,8 +10742,8 @@ def remove_private2():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss2 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss2 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi2 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi2 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -10743,8 +10786,8 @@ def remove_private3():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss3 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss3 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi3 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi3 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -10788,8 +10831,8 @@ def remove_private4():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss4 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss4 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi4 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi4 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -10832,8 +10875,8 @@ def remove_private5():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss5 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss5 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi5 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi5 > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -11047,23 +11090,23 @@ def gre61_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg61 up' >> {file_path}"
+    command = f"echo 'ip link set azumig61 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg61' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig61' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -11073,7 +11116,7 @@ def gre61_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg61 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig61 mtu {mtu_value}'
         with open('/etc/gre61.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11136,7 +11179,7 @@ def gre61_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping1_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -11161,23 +11204,23 @@ def kharej_gre61_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11249,23 +11292,23 @@ def kharej2_gre61_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[1]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11439,23 +11482,23 @@ def gre62_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:841a::1/64 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:841a::1/64 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg62 up' >> {file_path}"
+    command = f"echo 'ip link set azumig62 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:84{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg62' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig62' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -11465,7 +11508,7 @@ def gre62_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg62 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig62 mtu {mtu_value}'
         with open('/etc/gre62.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11528,7 +11571,7 @@ def gre62_kharej():
     ip_address = "2002:841a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping2_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -11553,23 +11596,23 @@ def kharej_gre62_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11642,23 +11685,23 @@ def kharej2_gre62_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[2]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11832,23 +11875,23 @@ def gre63_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:851a::1/64 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:851a::1/64 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg63 up' >> {file_path}"
+    command = f"echo 'ip link set azumig63 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:85{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg63' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig63' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -11858,7 +11901,7 @@ def gre63_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg63 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig63 mtu {mtu_value}'
         with open('/etc/gre63.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -11921,7 +11964,7 @@ def gre63_kharej():
     ip_address = "2002:851a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping3_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -11946,23 +11989,23 @@ def kharej_gre63_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12033,23 +12076,23 @@ def kharej2_gre63_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[3]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12153,23 +12196,23 @@ def gre61_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg61 up' >> {file_path}"
+    command = f"echo 'ip link set azumig61 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg61' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig61' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -12179,7 +12222,7 @@ def gre61_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg61 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig61 mtu {mtu_value}'
         with open('/etc/gre61.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12204,23 +12247,23 @@ def gre61_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig61 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg61 up' >> {file_path}"
+    command = f"echo 'ip link set azumig61 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg61' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig61' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg61' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig61' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -12244,7 +12287,7 @@ def gre61_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg61 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig61 mtu {mtu_value}\n"
         with open('/etc/gre61.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12308,7 +12351,7 @@ def gre61_iran():
     max_pings = 3
     interval = 20
     iran_ping1_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -12328,7 +12371,7 @@ def gre61_iran2():
     max_pings = 3
     interval = 20
     iran_ping1_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -12353,23 +12396,23 @@ def iran_gre61_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[1]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12444,23 +12487,23 @@ def iran2_gre61_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12568,23 +12611,23 @@ def gre62_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:841a::2/64 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:841a::2/64 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg62 up' >> {file_path}"
+    command = f"echo 'ip link set azumig62 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:84{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg62' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig62' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -12594,7 +12637,7 @@ def gre62_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg62 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig62 mtu {mtu_value}'
         with open('/etc/gre62.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)    
@@ -12619,23 +12662,23 @@ def gre62_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig62 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:841a::2/64 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:841a::2/64 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg62 up' >> {file_path}"
+    command = f"echo 'ip link set azumig62 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg62' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig62' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:84{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg62' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig62' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
     subprocess.run(f"bash {file_path}", shell=True, check=True)
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
@@ -12657,7 +12700,7 @@ def gre62_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg62 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig62 mtu {mtu_value}\n"
         with open('/etc/gre62.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12721,7 +12764,7 @@ def gre62_iran():
     max_pings = 3
     interval = 20
     iran_ping2_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -12741,7 +12784,7 @@ def gre62_iran2():
     max_pings = 3
     interval = 20
     iran_ping2_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -12766,23 +12809,23 @@ def iran_gre62_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[2]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12857,24 +12900,24 @@ def iran2_gre62_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -12982,23 +13025,23 @@ def gre63_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:851a::2/64 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:851a::2/64 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg63 up' >> {file_path}"
+    command = f"echo 'ip link set azumig63 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:85{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg63' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig63' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -13008,7 +13051,7 @@ def gre63_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissg63 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumig63 mtu {mtu_value}'
         with open('/etc/gre63.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13034,23 +13077,23 @@ def gre63_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig63 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:851a::2/64 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:851a::2/64 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg63 up' >> {file_path}"
+    command = f"echo 'ip link set azumig63 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg63' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig63' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:85{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg63' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig63' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -13073,7 +13116,7 @@ def gre63_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = "ip link set dev elissg63 mtu {mtu_value}\n"
+        mtu_command = "ip link set dev azumig63 mtu {mtu_value}\n"
         with open('/etc/gre63.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13137,7 +13180,7 @@ def gre63_iran():
     max_pings = 3
     interval = 20
     iran_ping3_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -13158,7 +13201,7 @@ def gre63_iran2():
     max_pings = 3
     interval = 20
     iran_ping3_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -13183,23 +13226,23 @@ def iran_gre63_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[3]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13274,23 +13317,23 @@ def iran2_gre63_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13521,23 +13564,23 @@ def ipip61_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:0db8:1234:a220::1/64 dev elissip1' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:0db8:1234:a220::1/64 dev azumip1' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip1 up' >> {file_path}"
+    command = f"echo 'ip link set azumip1 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip1' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip1' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:0db8:1234:a22{i}::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip1' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip1' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -13546,7 +13589,7 @@ def ipip61_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip1 mtu {mtu_value}\n"
         with open('/etc/ipip1.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13632,7 +13675,7 @@ def ipip1_kharej():
     max_pings = 3
     interval = 20
     create_ping1_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
     
@@ -13657,23 +13700,23 @@ def kharej_ipip61_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13745,23 +13788,23 @@ def kharej2_ipip61_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[1]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13865,23 +13908,23 @@ def ipip62_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:0db8:1234:a320::1/64 dev elissip2' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:0db8:1234:a320::1/64 dev azumip2' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip2 up' >> {file_path}"
+    command = f"echo 'ip link set azumip2 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip2' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip2' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:0db8:1234:a32{i}::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip2' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip2' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -13890,7 +13933,7 @@ def ipip62_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip2 mtu {mtu_value}\n"
         with open('/etc/ipip2.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -13976,7 +14019,7 @@ def ipip2_kharej():
     max_pings = 3
     interval = 20
     create_ping2_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
     
@@ -14001,23 +14044,23 @@ def kharej_ipip62_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14088,23 +14131,23 @@ def kharej2_ipip62_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[2]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14210,23 +14253,23 @@ def ipip63_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:0db8:1234:a420::1/64 dev elissip3' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:0db8:1234:a420::1/64 dev azumip3' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip3 up' >> {file_path}"
+    command = f"echo 'ip link set azumip3 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip3' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip3' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:0db8:1234:a42{i}::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip3' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip3' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -14235,7 +14278,7 @@ def ipip63_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip3 mtu {mtu_value}\n"
         with open('/etc/ipip3.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14321,7 +14364,7 @@ def ipip3_kharej():
     max_pings = 3
     interval = 20
     create_ping3_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
     
@@ -14346,23 +14389,23 @@ def kharej_ipip63_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14434,23 +14477,23 @@ def kharej2_ipip63_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[3]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14556,15 +14599,15 @@ def ipip61_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev elissip1\n')
-        f.write('ip link set elissip1 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip1\n')
+        f.write(f'ip -6 tunnel add azumip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev azumip1\n')
+        f.write('ip link set azumip1 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip1\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a22{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip1\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip1\n')
 
         
 
@@ -14574,7 +14617,7 @@ def ipip61_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissip1 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumip1 mtu {mtu_value}'
         with open('/etc/ipip1.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14599,15 +14642,15 @@ def ipip61_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev elissip1\n')
-        f.write('ip link set elissip1 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip1\n')
+        f.write(f'ip -6 tunnel add azumip1 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev azumip1\n')
+        f.write('ip link set azumip1 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip1\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a22{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip1\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip1\n')
 
     subprocess.run(f'bash {file_path}', shell=True, check=True)   
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
@@ -14630,7 +14673,7 @@ def ipip61_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip1 mtu {mtu_value}\n"
         with open('/etc/ipip1.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14717,7 +14760,7 @@ def ipip1_iran():
     max_pings = 3
     interval = 20
     iran_ping1_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -14740,7 +14783,7 @@ def ipip1_iran2():
     max_pings = 3
     interval = 20
     iran_ping1_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -14767,23 +14810,23 @@ def iran_ipip61_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[1]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14858,23 +14901,23 @@ def iran2_ipip61_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -14985,15 +15028,15 @@ def ipip62_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a320::2/64 dev elissip2\n')
-        f.write('ip link set elissip2 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip2\n')
+        f.write(f'ip -6 tunnel add azumip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a320::2/64 dev azumip2\n')
+        f.write('ip link set azumip2 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip2\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a32{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip2\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip2\n')
 
         
 
@@ -15003,7 +15046,7 @@ def ipip62_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip2 mtu {mtu_value}\n"
         with open('/etc/ipip2.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15029,15 +15072,15 @@ def ipip62_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a320::2/64 dev elissip2\n')
-        f.write('ip link set elissip2 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip2\n')
+        f.write(f'ip -6 tunnel add azumip2 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a320::2/64 dev azumip2\n')
+        f.write('ip link set azumip2 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip2\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a32{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip2\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip2\n')
 
     subprocess.run(f'bash {file_path}', shell=True, check=True)    
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
@@ -15059,7 +15102,7 @@ def ipip62_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip2 mtu {mtu_value}\n"
         with open('/etc/ipip2.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15147,7 +15190,7 @@ def ipip2_iran():
     max_pings = 3
     interval = 20
     iran_ping2_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -15170,7 +15213,7 @@ def ipip2_iran2():
     max_pings = 3
     interval = 20
     iran_ping2_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -15198,23 +15241,23 @@ def iran_ipip62_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[2]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)           
@@ -15289,23 +15332,23 @@ def iran2_ipip62_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15415,15 +15458,15 @@ def ipip63_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a420::2/64 dev elissip3\n')
-        f.write('ip link set elissip3 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip3\n')
+        f.write(f'ip -6 tunnel add azumip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a420::2/64 dev azumip3\n')
+        f.write('ip link set azumip3 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip3\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a42{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip3\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip3\n')
 
         
 
@@ -15433,7 +15476,7 @@ def ipip63_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip3 mtu {mtu_value}\n"
         with open('/etc/ipip3.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15458,15 +15501,15 @@ def ipip63_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a420::2/64 dev elissip3\n')
-        f.write('ip link set elissip3 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip3\n')
+        f.write(f'ip -6 tunnel add azumip3 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a420::2/64 dev azumip3\n')
+        f.write('ip link set azumip3 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip3\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a42{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip3\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip3\n')
 
     subprocess.run(f'bash {file_path}', shell=True, check=True)    
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
@@ -15488,7 +15531,7 @@ def ipip63_iran2_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip3 mtu {mtu_value}\n"
         with open('/etc/ipip3.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15575,7 +15618,7 @@ def ipip3_iran():
     max_pings = 3
     interval = 20
     iran_ping3_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -15598,7 +15641,7 @@ def ipip3_iran2():
     max_pings = 3
     interval = 20
     iran_ping3_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -15626,23 +15669,23 @@ def iran_ipip63_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[3]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)         
@@ -15716,23 +15759,23 @@ def iran2_ipip63_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)           
@@ -15841,15 +15884,15 @@ def ipip64_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip4 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a520::2/64 dev elissip4\n')
-        f.write('ip link set elissip4 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip4\n')
+        f.write(f'ip -6 tunnel add azumip4 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a520::2/64 dev azumip4\n')
+        f.write('ip link set azumip4 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip4\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a52{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip4\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip4\n')
 
         
 
@@ -15859,7 +15902,7 @@ def ipip64_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissip4 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumip4 mtu {mtu_value}'
         with open('/etc/ipip4.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -15948,7 +15991,7 @@ def ipip4_iran():
     max_pings = 3
     interval = 20
     iran_ping4_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -15977,23 +16020,23 @@ def iran_ipip64_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[4]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss4", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi4", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b781::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi4"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private4.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss4 up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b781::2/64 dev eliss4\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss4\n")
+        f.write(f"ip tunnel add azumi4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi4 up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b781::2/64 dev azumi4\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi4\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
         with open("/etc/private4.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16102,15 +16145,15 @@ def ipip65_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip5 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a620::2/64 dev elissip5\n')
-        f.write('ip link set elissip5 up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip5\n')
+        f.write(f'ip -6 tunnel add azumip5 mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a620::2/64 dev azumip5\n')
+        f.write('ip link set azumip5 up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip5\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a62{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip5\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip5\n')
 
     command = f'chmod +x {file_path}'
     subprocess.run(command, shell=True, check=True)
@@ -16118,7 +16161,7 @@ def ipip65_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f'ip link set dev elissip5 mtu {mtu_value}'
+        mtu_command = f'ip link set dev azumip5 mtu {mtu_value}'
         with open('/etc/ipip5.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16207,7 +16250,7 @@ def ipip5_iran():
     max_pings = 3
     interval = 20
     iran_ping5_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -16236,23 +16279,23 @@ def iran_ipip65_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[5]\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss5", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi5", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b881::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi5"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private5.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss5 up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b881::2/64 dev eliss5\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss5\n")
+        f.write(f"ip tunnel add azumi5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi5 up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b881::2/64 dev azumi5\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi5\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
         with open("/etc/private5.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16473,7 +16516,7 @@ def add_cron1_job():
         
 def run_ping1():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:831b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -16520,13 +16563,13 @@ def kharej1_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej \033[96m[1]\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -16535,27 +16578,27 @@ def kharej1_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:83{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss1"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi1"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss1\n")
+            f.write(f"ip addr add {ip_addr} dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16629,13 +16672,13 @@ def kharej1_private2_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[1]\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -16644,27 +16687,27 @@ def kharej1_private2_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:83{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss1"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi1"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi1"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss1\n")
+            f.write(f"ip addr add {ip_addr} dev azumi1\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16747,7 +16790,7 @@ def add_cron2_job():
         
 def run_ping2():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:841b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -16794,13 +16837,13 @@ def kharej2_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej \033[96m[2]\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -16809,27 +16852,27 @@ def kharej2_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:84{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss2"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi2"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:84{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss2\n")
+            f.write(f"ip addr add {ip_addr} dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -16905,13 +16948,13 @@ def kharej2_private2_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[2]\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:841b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -16920,27 +16963,27 @@ def kharej2_private2_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:84{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss2"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi2"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi2"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::1/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::1/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:84{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss2\n")
+            f.write(f"ip addr add {ip_addr} dev azumi2\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17024,7 +17067,7 @@ def add_cron3_job():
         
 def run_ping3():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:851b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -17071,13 +17114,13 @@ def kharej3_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej \033[96m[3]\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17086,27 +17129,27 @@ def kharej3_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:85{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss3"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi3"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi3\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:85{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss3\n")
+            f.write(f"ip addr add {ip_addr} dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17182,13 +17225,13 @@ def kharej3_private2_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[3]\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:851b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17197,27 +17240,27 @@ def kharej3_private2_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:85{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss3"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi3"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi3"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::1/64 dev eliss3\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::1/64 dev azumi3\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi3\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:85{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss3\n")
+            f.write(f"ip addr add {ip_addr} dev azumi3\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17301,7 +17344,7 @@ def add_cron4_job():
         
 def run_ping4():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:861b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -17345,13 +17388,13 @@ def kharej4_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej \033[96m[4]\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss4", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi4", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:861b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi4"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17360,27 +17403,27 @@ def kharej4_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:86{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss4"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi4"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi4"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private4.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss4 up\n")
-        f.write("ip addr add 2001:861b::1/64 dev eliss4\n")
-        f.write("ip -6 route add 2001::/16 dev eliss4\n")
+        f.write(f"ip tunnel add azumi4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi4 up\n")
+        f.write("ip addr add 2001:861b::1/64 dev azumi4\n")
+        f.write("ip -6 route add 2001::/16 dev azumi4\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:86{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss4\n")
+            f.write(f"ip addr add {ip_addr} dev azumi4\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
         with open("/etc/private4.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17455,13 +17498,13 @@ def kharej4_private2_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[4]\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss4", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi4", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:861b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi4"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17470,27 +17513,27 @@ def kharej4_private2_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:86{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss4"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi4"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi4"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private4.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss4 up\n")
-        f.write("ip addr add 2001:861b::1/64 dev eliss4\n")
-        f.write("ip -6 route add 2001::/16 dev eliss4\n")
+        f.write(f"ip tunnel add azumi4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi4 up\n")
+        f.write("ip addr add 2001:861b::1/64 dev azumi4\n")
+        f.write("ip -6 route add 2001::/16 dev azumi4\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:86{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss4\n")
+            f.write(f"ip addr add {ip_addr} dev azumi4\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
         with open("/etc/private4.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17574,7 +17617,7 @@ def add_cron5_job():
         
 def run_ping5():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:871b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -17618,13 +17661,13 @@ def kharej5_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej \033[96m[5]\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss5", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi5", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:871b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi5"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17633,27 +17676,27 @@ def kharej5_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:87{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss5"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi5"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi5"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private5.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss5 up\n")
-        f.write("ip addr add 2001:871b::1/64 dev eliss5\n")
-        f.write("ip -6 route add 2001::/16 dev eliss5\n")
+        f.write(f"ip tunnel add azumi5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi5 up\n")
+        f.write("ip addr add 2001:871b::1/64 dev azumi5\n")
+        f.write("ip -6 route add 2001::/16 dev azumi5\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:87{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss5\n")
+            f.write(f"ip addr add {ip_addr} dev azumi5\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
         with open("/etc/private5.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17728,13 +17771,13 @@ def kharej5_private2_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN \033[96m[5]\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss5", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi5", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:871b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi5"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -17743,27 +17786,27 @@ def kharej5_private2_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:87{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss5"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi5"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi5"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private5.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss5 up\n")
-        f.write("ip addr add 2001:871b::1/64 dev eliss5\n")
-        f.write("ip -6 route add 2001::/16 dev eliss5\n")
+        f.write(f"ip tunnel add azumi5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi5 up\n")
+        f.write("ip addr add 2001:871b::1/64 dev azumi5\n")
+        f.write("ip -6 route add 2001::/16 dev azumi5\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:87{ip_suffix}b::1/64"
-            f.write(f"ip addr add {ip_addr} dev eliss5\n")
+            f.write(f"ip addr add {ip_addr} dev azumi5\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
         with open("/etc/private5.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17826,7 +17869,7 @@ done
 ## IRAN1
 def run_ping1_iran():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:831b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -17848,14 +17891,14 @@ def iran1_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[1]\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -17867,29 +17910,29 @@ def iran1_private_menu():
         ip_addr = f"2001:83{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss1"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi1"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss1\n")
+            f.write(f"ip addr add {ip_addr} dev azumi1\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -17971,14 +18014,14 @@ def iran1_private2_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss1", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi1", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi1", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -17990,24 +18033,24 @@ def iran1_private2_menu():
         ip_addr = f"2001:83{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss1"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi1"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss1"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi1"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private1.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss1 up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss1\n")
-        f.write("ip -6 route add 2001::/16 dev eliss1\n")
+        f.write(f"ip tunnel add azumi1 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi1 up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi1\n")
+        f.write("ip -6 route add 2001::/16 dev azumi1\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss1\n")
+            f.write(f"ip addr add {ip_addr} dev azumi1\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -18024,7 +18067,7 @@ def iran1_private2_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
         with open("/etc/private1.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18091,7 +18134,7 @@ done
 ## IRAN2
 def run_ping2_iran():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:841b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -18113,14 +18156,14 @@ def iran2_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[2]\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18132,29 +18175,29 @@ def iran2_private_menu():
         ip_addr = f"2001:84{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss2"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi2"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:84{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss2\n")
+            f.write(f"ip addr add {ip_addr} dev azumi2\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18235,14 +18278,14 @@ def iran2_private2_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss2", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi2", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi2", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:841b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18254,24 +18297,24 @@ def iran2_private2_menu():
         ip_addr = f"2001:84{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss2"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi2"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss2"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi2"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private2.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss2 up\n")
-        f.write("ip addr add 2001:841b::2/64 dev eliss2\n")
-        f.write("ip -6 route add 2001::/16 dev eliss2\n")
+        f.write(f"ip tunnel add azumi2 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi2 up\n")
+        f.write("ip addr add 2001:841b::2/64 dev azumi2\n")
+        f.write("ip -6 route add 2001::/16 dev azumi2\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:84{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss2\n")
+            f.write(f"ip addr add {ip_addr} dev azumi2\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -18288,7 +18331,7 @@ def iran2_private2_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
         with open("/etc/private2.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18354,7 +18397,7 @@ done
 ## IRAN3
 def run_ping3_iran():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:851b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -18376,14 +18419,14 @@ def iran3_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[3]\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18395,29 +18438,29 @@ def iran3_private_menu():
         ip_addr = f"2001:85{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss3"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi3"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:85{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss3\n")
+            f.write(f"ip addr add {ip_addr} dev azumi3\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18497,14 +18540,14 @@ def iran3_private2_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss3", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi3", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi3", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:851b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss3"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18516,24 +18559,24 @@ def iran3_private2_menu():
         ip_addr = f"2001:85{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss3"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi3"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss3"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi3"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private3.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss3 up\n")
-        f.write("ip addr add 2001:851b::2/64 dev eliss3\n")
-        f.write("ip -6 route add 2001::/16 dev eliss3\n")
+        f.write(f"ip tunnel add azumi3 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi3 up\n")
+        f.write("ip addr add 2001:851b::2/64 dev azumi3\n")
+        f.write("ip -6 route add 2001::/16 dev azumi3\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:85{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss3\n")
+            f.write(f"ip addr add {ip_addr} dev azumi3\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -18550,7 +18593,7 @@ def iran3_private2_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
         with open("/etc/private3.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18616,7 +18659,7 @@ done
 ## IRAN4
 def run_ping4_iran():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:861b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -18638,14 +18681,14 @@ def iran4_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[4]\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss4", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi4", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:861b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18657,29 +18700,29 @@ def iran4_private_menu():
         ip_addr = f"2001:86{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss4"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi4"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private4.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss4 up\n")
-        f.write("ip addr add 2001:861b::2/64 dev eliss4\n")
-        f.write("ip -6 route add 2001::/16 dev eliss4\n")
+        f.write(f"ip tunnel add azumi4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi4 up\n")
+        f.write("ip addr add 2001:861b::2/64 dev azumi4\n")
+        f.write("ip -6 route add 2001::/16 dev azumi4\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:86{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss4\n")
+            f.write(f"ip addr add {ip_addr} dev azumi4\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
         with open("/etc/private4.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18759,14 +18802,14 @@ def iran4_private2_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss4", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi4", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi4", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:861b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss4"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18778,24 +18821,24 @@ def iran4_private2_menu():
         ip_addr = f"2001:86{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss4"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi4"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss4"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi4"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private4.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss4 up\n")
-        f.write("ip addr add 2001:861b::2/64 dev eliss4\n")
-        f.write("ip -6 route add 2001::/16 dev eliss4\n")
+        f.write(f"ip tunnel add azumi4 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi4 up\n")
+        f.write("ip addr add 2001:861b::2/64 dev azumi4\n")
+        f.write("ip -6 route add 2001::/16 dev azumi4\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:86{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss4\n")
+            f.write(f"ip addr add {ip_addr} dev azumi4\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -18812,7 +18855,7 @@ def iran4_private2_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
         with open("/etc/private4.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -18878,7 +18921,7 @@ done
 ## IRAN5
 def run_ping5_iran():
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:871b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -18900,14 +18943,14 @@ def iran5_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej \033[96m[5]\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss5", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi5", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:871b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -18919,29 +18962,29 @@ def iran5_private_menu():
         ip_addr = f"2001:87{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss5"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi5"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private5.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss5 up\n")
-        f.write("ip addr add 2001:871b::2/64 dev eliss5\n")
-        f.write("ip -6 route add 2001::/16 dev eliss5\n")
+        f.write(f"ip tunnel add azumi5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi5 up\n")
+        f.write("ip addr add 2001:871b::2/64 dev azumi5\n")
+        f.write("ip -6 route add 2001::/16 dev azumi5\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:87{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss5\n")
+            f.write(f"ip addr add {ip_addr} dev azumi5\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
         with open("/etc/private5.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -19022,14 +19065,14 @@ def iran5_private2_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss5", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi5", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi5", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:871b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss5"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92madditional private IPs\033[93m do you need? \033[0m"))
@@ -19041,24 +19084,24 @@ def iran5_private2_menu():
         ip_addr = f"2001:87{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "addr", "show", "dev", "eliss5"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "addr", "show", "dev", "azumi5"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "eliss5"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "addr", "add", ip_addr, "dev", "azumi5"], stdout=subprocess.DEVNULL)
     
 
     display_notification("\033[93mAdding commands...\033[0m")
     with open("/etc/private5.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss5 up\n")
-        f.write("ip addr add 2001:871b::2/64 dev eliss5\n")
-        f.write("ip -6 route add 2001::/16 dev eliss5\n")
+        f.write(f"ip tunnel add azumi5 mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi5 up\n")
+        f.write("ip addr add 2001:871b::2/64 dev azumi5\n")
+        f.write("ip -6 route add 2001::/16 dev azumi5\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:87{ip_suffix}b::2/64"
-            f.write(f"ip addr add {ip_addr} dev eliss5\n")
+            f.write(f"ip addr add {ip_addr} dev azumi5\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -19075,7 +19118,7 @@ def iran5_private2_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
         with open("/etc/private5.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -19800,14 +19843,14 @@ def ipip_kh1_mtu():
     
     priv_kh1_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip1 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip1 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip1.sh"):
         with open("/etc/ipip1.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip1 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip1 mtu" not in line]
+        if any("link set dev azumip1 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip1 mtu" not in line]
 
             with open("/etc/ipip1.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19824,14 +19867,14 @@ def ipip_kh2_mtu():
     
     priv_kh2_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip2 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip2 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip2.sh"):
         with open("/etc/ipip2.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip2 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip2 mtu" not in line]
+        if any("link set dev azumip2 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip2 mtu" not in line]
 
             with open("/etc/ipip2.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19848,14 +19891,14 @@ def ipip_kh3_mtu():
     
     priv_kh3_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip3 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip3 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip3.sh"):
         with open("/etc/ipip3.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip3 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip3 mtu" not in line]
+        if any("link set dev azumip3 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip3 mtu" not in line]
 
             with open("/etc/ipip3.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19872,14 +19915,14 @@ def ipip_ir1_mtu():
     
     priv_ir1_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip1 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip1 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip1.sh"):
         with open("/etc/ipip1.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip1 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip1 mtu" not in line]
+        if any("link set dev azumip1 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip1 mtu" not in line]
 
             with open("/etc/ipip1.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19896,14 +19939,14 @@ def ipip_ir2_mtu():
     
     priv_ir2_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip2 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip2 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip2.sh"):
         with open("/etc/ipip2.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip2 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip2 mtu" not in line]
+        if any("link set dev azumip2 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip2 mtu" not in line]
 
             with open("/etc/ipip2.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19920,14 +19963,14 @@ def ipip_ir3_mtu():
     
     priv_ir3_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip3 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip3 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip3.sh"):
         with open("/etc/ipip3.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissip3 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissip3 mtu" not in line]
+        if any("link set dev azumip3 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumip3 mtu" not in line]
 
             with open("/etc/ipip3.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19945,14 +19988,14 @@ def priv_kh1_mtu():
     display_notification("\033[93m             Server 1\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private1.sh"):
         with open("/etc/private1.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss1 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss1 mtu" not in line]
+        if any("link set dev azumi1 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi1 mtu" not in line]
 
             with open("/etc/private1.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19970,14 +20013,14 @@ def priv_kh2_mtu():
     display_notification("\033[93m             Server 2\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private2.sh"):
         with open("/etc/private2.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss2 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss2 mtu" not in line]
+        if any("link set dev azumi2 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi2 mtu" not in line]
 
             with open("/etc/private2.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -19995,14 +20038,14 @@ def priv_kh3_mtu():
     display_notification("\033[93m             Server 3\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private3.sh"):
         with open("/etc/private3.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss3 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss3 mtu" not in line]
+        if any("link set dev azumi3 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi3 mtu" not in line]
 
             with open("/etc/private3.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20020,14 +20063,14 @@ def priv_kh4_mtu():
     display_notification("\033[93m             Server 4\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private4.sh"):
         with open("/etc/private4.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss4 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss4 mtu" not in line]
+        if any("link set dev azumi4 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi4 mtu" not in line]
 
             with open("/etc/private4.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20045,14 +20088,14 @@ def priv_kh5_mtu():
     display_notification("\033[93m             Server 5\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private5.sh"):
         with open("/etc/private5.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss5 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss5 mtu" not in line]
+        if any("link set dev azumi5 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi5 mtu" not in line]
 
             with open("/etc/private5.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20071,14 +20114,14 @@ def priv_ir1_mtu():
     display_notification("\033[93m             Server 1\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss1 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi1 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private1.sh"):
         with open("/etc/private1.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss1 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss1 mtu" not in line]
+        if any("link set dev azumi1 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi1 mtu" not in line]
 
             with open("/etc/private1.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20096,14 +20139,14 @@ def priv_ir2_mtu():
     display_notification("\033[93m             Server 2\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss2 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi2 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private2.sh"):
         with open("/etc/private2.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss2 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss2 mtu" not in line]
+        if any("link set dev azumi2 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi2 mtu" not in line]
 
             with open("/etc/private2.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20121,14 +20164,14 @@ def priv_ir3_mtu():
     ddisplay_notification("\033[93m             Server 3\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss3 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi3 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private3.sh"):
         with open("/etc/private3.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss3 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss3 mtu" not in line]
+        if any("link set dev azumi3 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi3 mtu" not in line]
 
             with open("/etc/private3.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20146,14 +20189,14 @@ def priv_ir4_mtu():
     ddisplay_notification("\033[93m             Server 4\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss4 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi4 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private4.sh"):
         with open("/etc/private4.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss4 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss4 mtu" not in line]
+        if any("link set dev azumi4 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi4 mtu" not in line]
 
             with open("/etc/private4.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20171,14 +20214,14 @@ def priv_ir5_mtu():
     display_notification("\033[93m             Server 5\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss5 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi5 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private5.sh"):
         with open("/etc/private5.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss5 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss5 mtu" not in line]
+        if any("link set dev azumi5 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi5 mtu" not in line]
 
             with open("/etc/private5.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20195,14 +20238,14 @@ def priv_ir5_mtu():
 def gre6_kh1_mtu():
     priv_kh1_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg61 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig61 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre61.sh"):
         with open("/etc/gre61.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg61 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg61 mtu" not in line]
+        if any("link set dev azumig61 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig61 mtu" not in line]
 
             with open("/etc/gre61.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20218,14 +20261,14 @@ def gre6_kh1_mtu():
 def gre6_kh2_mtu():
     priv_kh2_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg62 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig62 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre62.sh"):
         with open("/etc/gre62.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg62 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg62 mtu" not in line]
+        if any("link set dev azumig62 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig62 mtu" not in line]
 
             with open("/etc/gre62.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20241,14 +20284,14 @@ def gre6_kh2_mtu():
 def gre6_kh3_mtu():
     priv_kh3_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg63 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig63 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre63.sh"):
         with open("/etc/gre63.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg63 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg63 mtu" not in line]
+        if any("link set dev azumig63 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig63 mtu" not in line]
 
             with open("/etc/gre63.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20265,14 +20308,14 @@ def gre6_kh3_mtu():
 def gre6_ir1_mtu():
     priv_ir1_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg61 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig61 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre61.sh"):
         with open("/etc/gre61.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg61 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg61 mtu" not in line]
+        if any("link set dev azumig61 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig61 mtu" not in line]
 
             with open("/etc/gre61.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20288,14 +20331,14 @@ def gre6_ir1_mtu():
 def gre6_ir2_mtu():
     priv_ir2_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg62 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig62 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre62.sh"):
         with open("/etc/gre62.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg62 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg62 mtu" not in line]
+        if any("link set dev azumig62 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig62 mtu" not in line]
 
             with open("/etc/gre62.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20311,14 +20354,14 @@ def gre6_ir2_mtu():
 def gre6_ir3_mtu():
     priv_ir3_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg63 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig63 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre63.sh"):
         with open("/etc/gre63.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev elissg63 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev elissg63 mtu" not in line]
+        if any("link set dev azumig63 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumig63 mtu" not in line]
 
             with open("/etc/gre63.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20335,14 +20378,14 @@ def gre6_ir3_mtu():
 
 def i6to4any2_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96m6to4 anycast \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev eliss6 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumi6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/6to4.sh"):
         with open("/etc/6to4.sh", "r") as file:
             sh_contents = file.readlines()
 
-        if any("link set dev eliss6 mtu" in line for line in sh_contents):
-            sh_contents = [line for line in sh_contents if "link set dev eliss6 mtu" not in line]
+        if any("link set dev azumi6 mtu" in line for line in sh_contents):
+            sh_contents = [line for line in sh_contents if "link set dev azumi6 mtu" not in line]
 
             with open("/etc/6to4.sh", "w") as file:
                 file.writelines(sh_contents)
@@ -20503,7 +20546,7 @@ def spn7_mtu():
 
 def gre6tap21_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6tap \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre6.sh"):
         with open("/etc/gre6.sh", "r") as file:
@@ -20511,7 +20554,7 @@ def gre6tap21_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissg6 mtu" in sh_contents[i]:
+            if "link set dev azumig6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20530,7 +20573,7 @@ def gre6tap21_mtu():
 def gre6tap_mtu():
     private_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6tap \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre6.sh"):
         with open("/etc/gre6.sh", "r") as file:
@@ -20538,7 +20581,7 @@ def gre6tap_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissg6 mtu" in sh_contents[i]:
+            if "link set dev azumig6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20556,7 +20599,7 @@ def gre6tap_mtu():
 
 def spn1_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mErspan \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
 
     if os.path.exists("/etc/spn.sh"):
         with open("/etc/spn.sh", "r") as file:
@@ -20564,7 +20607,7 @@ def spn1_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissespn mtu" in sh_contents[i]:
+            if "link set dev azumiespn mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20584,7 +20627,7 @@ def spn3_mtu():
     private_mtu()
     gre621_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mErspan \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
 
     if os.path.exists("/etc/spn.sh"):
         with open("/etc/spn.sh", "r") as file:
@@ -20592,7 +20635,7 @@ def spn3_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissespn mtu" in sh_contents[i]:
+            if "link set dev azumiespn mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20611,7 +20654,7 @@ def spn3_mtu():
 def spn4_mtu():
     gre621_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mErspan \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
 
     if os.path.exists("/etc/spn.sh"):
         with open("/etc/spn.sh", "r") as file:
@@ -20619,7 +20662,7 @@ def spn4_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissespn mtu" in sh_contents[i]:
+            if "link set dev azumiespn mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20639,7 +20682,7 @@ def spn5_mtu():
 
     gre6tap_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mErspan \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
 
     if os.path.exists("/etc/spn.sh"):
         with open("/etc/spn.sh", "r") as file:
@@ -20647,7 +20690,7 @@ def spn5_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissespn mtu" in sh_contents[i]:
+            if "link set dev azumiespn mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20667,7 +20710,7 @@ def spn6_mtu():
     private_mtu()
     gre6tap21_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mErspan \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
 
     if os.path.exists("/etc/spn.sh"):
         with open("/etc/spn.sh", "r") as file:
@@ -20675,7 +20718,7 @@ def spn6_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissespn mtu" in sh_contents[i]:
+            if "link set dev azumiespn mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20740,7 +20783,7 @@ def gen4_mtu():
     private_mtu()
     gre621_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGeneve \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
 
     if os.path.exists("/etc/sys.sh"):
         with open("/etc/sys.sh", "r") as file:
@@ -20748,7 +20791,7 @@ def gen4_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissgen mtu" in sh_contents[i]:
+            if "link set dev azumigen mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20766,7 +20809,7 @@ def gen4_mtu():
         
 def gen1_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGeneve \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
 
     if os.path.exists("/etc/sys.sh"):
         with open("/etc/sys.sh", "r") as file:
@@ -20774,7 +20817,7 @@ def gen1_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissgen mtu" in sh_contents[i]:
+            if "link set dev azumigen mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20793,7 +20836,7 @@ def gen1_mtu():
 def gen2_mtu():
     gre621_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGeneve \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
 
     if os.path.exists("/etc/sys.sh"):
         with open("/etc/sys.sh", "r") as file:
@@ -20801,7 +20844,7 @@ def gen2_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissgen mtu" in sh_contents[i]:
+            if "link set dev azumigen mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20821,7 +20864,7 @@ def gen3_mtu():
     private2_mtu()
     gre621_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGeneve \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
 
     if os.path.exists("/etc/sys.sh"):
         with open("/etc/sys.sh", "r") as file:
@@ -20829,7 +20872,7 @@ def gen3_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissgen mtu" in sh_contents[i]:
+            if "link set dev azumigen mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20847,7 +20890,7 @@ def gen3_mtu():
 
 def private2_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[\033[96mIP6tnl\033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private.sh"):
         with open("/etc/private.sh", "r") as file:
@@ -20855,7 +20898,7 @@ def private2_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev eliss mtu" in sh_contents[i]:
+            if "link set dev azumi mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20873,7 +20916,7 @@ def private2_mtu():
         
 def private_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mPrivate IP \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
 
     if os.path.exists("/etc/private.sh"):
         with open("/etc/private.sh", "r") as file:
@@ -20881,7 +20924,7 @@ def private_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev eliss mtu" in sh_contents[i]:
+            if "link set dev azumi mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20899,7 +20942,7 @@ def private_mtu():
         
 def gre621_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre6.sh"):
         with open("/etc/gre6.sh", "r") as file:
@@ -20907,7 +20950,7 @@ def gre621_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissg6 mtu" in sh_contents[i]:
+            if "link set dev azumig6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20926,7 +20969,7 @@ def gre621_mtu():
 def gre6_mtu():
     private_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE6 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre6.sh"):
         with open("/etc/gre6.sh", "r") as file:
@@ -20934,7 +20977,7 @@ def gre6_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissg6 mtu" in sh_contents[i]:
+            if "link set dev azumig6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20953,7 +20996,7 @@ def gre6_mtu():
 
 def gre_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mGRE \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev elissg mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumig mtu {mtu_value}\n"
 
     if os.path.exists("/etc/gre.sh"):
         with open("/etc/gre.sh", "r") as file:
@@ -20961,7 +21004,7 @@ def gre_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissg mtu" in sh_contents[i]:
+            if "link set dev azumig mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -20979,7 +21022,7 @@ def gre_mtu():
         
 def i6to4_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96m6to4 \033[93m]:\033[0m ")
-    mtu_command = f"ip link set dev eliss6 mtu {mtu_value}\n"
+    mtu_command = f"ip link set dev azumi6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/6to4.sh"):
         with open("/etc/6to4.sh", "r") as file:
@@ -20987,7 +21030,7 @@ def i6to4_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev eliss6 mtu" in sh_contents[i]:
+            if "link set dev azumi6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -21005,7 +21048,7 @@ def i6to4_mtu():
 
 def i6to4any_mtu():
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96m6to4 anycast \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev eliss6 mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumi6 mtu {mtu_value}\n"
 
     if os.path.exists("/etc/6to4.sh"):
         with open("/etc/6to4.sh", "r") as file:
@@ -21013,7 +21056,7 @@ def i6to4any_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev eliss6 mtu" in sh_contents[i]:
+            if "link set dev azumi6 mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -21032,7 +21075,7 @@ def i6to4any_mtu():
 def ipip_mtu():
     private_mtu()
     mtu_value = input("\033[93mEnter the \033[92mMTU value \033[93m[ \033[96mIP6IP6 \033[93m]:\033[0m ")
-    mtu_command = f"/sbin/ip -6 link set dev elissip mtu {mtu_value}\n"
+    mtu_command = f"/sbin/ip -6 link set dev azumip mtu {mtu_value}\n"
 
     if os.path.exists("/etc/ipip.sh"):
         with open("/etc/ipip.sh", "r") as file:
@@ -21040,7 +21083,7 @@ def ipip_mtu():
 
         mtu_exists = False
         for i in range(len(sh_contents)):
-            if "link set dev elissip mtu" in sh_contents[i]:
+            if "link set dev azumip mtu" in sh_contents[i]:
                 sh_contents[i] = mtu_command
                 mtu_exists = True
                 break
@@ -21229,19 +21272,19 @@ def kharej_ip_menu():
     command = f"echo '/sbin/modprobe sit' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip tunnel add elissi mode ipip remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip tunnel add azumii mode ipip remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add {ipv6}/16 dev elissi' >> {file_path}"
+    command = f"echo 'ip addr add {ipv6}/16 dev azumii' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
 
     for i in range(2, num_additional_ips + 2):
         ip_address = f"{ipv6[:-1]}{i}/16"  
-        command = f"echo 'ip addr add {ip_address} dev elissi' >> {file_path}"
+        command = f"echo 'ip addr add {ip_address} dev azumii' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link set elissi up' >> {file_path}"
+    command = f"echo 'ip link set azumii up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -21301,19 +21344,19 @@ def iran_ip_menu():
     command = f"echo '/sbin/modprobe sit' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip tunnel add elissi mode ipip remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip tunnel add azumii mode ipip remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add {ipv6}/16 dev elissi' >> {file_path}"
+    command = f"echo 'ip addr add {ipv6}/16 dev azumii' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
 
     for i in range(2, num_additional_ips + 2):
         ip_address = f"{ipv6[:-1]}{i}/16" 
-        command = f"echo 'ip addr add {ip_address} dev elissi' >> {file_path}"
+        command = f"echo 'ip addr add {ip_address} dev azumii' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip link set elissi up' >> {file_path}"
+    command = f"echo 'ip link set azumii up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -21461,23 +21504,23 @@ def ipip6_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ipip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissip mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumip mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:0db8:1234:a220::1/64 dev elissip' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:0db8:1234:a220::1/64 dev azumip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissip up' >> {file_path}"
+    command = f"echo 'ip link set azumip up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissip' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumip' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:0db8:1234:a22{i}::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissip' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumip' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -21502,7 +21545,7 @@ def ipip6_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip mtu {mtu_value}\n"
         with open('/etc/ipip.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -21589,7 +21632,7 @@ def ipip_kharej():
     max_pings = 3
     interval = 20
     create_ping_script(ip_address, max_pings, interval)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -21624,24 +21667,24 @@ def kharej_ipip6_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -21757,15 +21800,15 @@ def ipip6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
 
     with open(file_path, 'w') as f:
         f.write('/sbin/modprobe ipip\n')
-        f.write(f'ip -6 tunnel add elissip mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
-        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev elissip\n')
-        f.write('ip link set elissip up\n')
-        f.write('ip -6 route add 2002::/16 dev elissip\n')
+        f.write(f'ip -6 tunnel add azumip mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n')
+        f.write('ip -6 addr add 2002:0db8:1234:a220::2/64 dev azumip\n')
+        f.write('ip link set azumip up\n')
+        f.write('ip -6 route add 2002::/16 dev azumip\n')
         created_ips = []
         for i in range(2, num_additional_ips + 2):
             ip_address = f'2002:0db8:1234:a22{i}::2'
             created_ips.append(ip_address)
-            f.write(f'ip -6 addr add {ip_address}/64 dev elissip\n')
+            f.write(f'ip -6 addr add {ip_address}/64 dev azumip\n')
 
         
 
@@ -21788,7 +21831,7 @@ def ipip6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [IP6IP6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissip mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumip mtu {mtu_value}\n"
         with open('/etc/ipip.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -21879,7 +21922,7 @@ def ipip_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -21915,25 +21958,25 @@ def iran_ipip6_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22031,7 +22074,7 @@ def private_ip():
 def run_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:831b::2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -22040,7 +22083,7 @@ def run_ping():
 def run_ping_iran():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "2001:831b::1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -22091,13 +22134,13 @@ def kharej_private_menu():
     local_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "-6", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi"], stdout=subprocess.DEVNULL)
 
     num_ips = int(input("\033[93mHow many \033[92mprivate IPs\033[93m do you need? \033[0m"))
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -22106,24 +22149,24 @@ def kharej_private_menu():
         ip_suffix = hex(i)[2:]
         ip_addr = f"2001:83{ip_suffix}b::1/64"
 
-        result = subprocess.run(["ip", "-6", "addr", "show", "dev", "eliss"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "-6", "addr", "show", "dev", "azumi"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "-6", "addr", "add", ip_addr, "dev", "eliss"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "-6", "addr", "add", ip_addr, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip -6 addr add 2001:831b::1/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip -6 addr add 2001:831b::1/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::1/64"
-            f.write(f"ip -6 addr add {ip_addr} dev eliss\n")
+            f.write(f"ip -6 addr add {ip_addr} dev azumi\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -22140,7 +22183,7 @@ def kharej_private_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22223,14 +22266,14 @@ def iran_private_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     
     
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
     
     
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "-6", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     
-    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "route", "add", "2001::/16", "dev", "azumi"], stdout=subprocess.DEVNULL)
     
    
     num_ips = int(input("\033[93mHow many \033[92mprivate IPs\033[93m do you need? \033[0m"))
@@ -22242,25 +22285,25 @@ def iran_private_menu():
         ip_addr = f"2001:83{ip_suffix}b::2/64"
         
 
-        result = subprocess.run(["ip", "-6", "addr", "show", "dev", "eliss"], capture_output=True, text=True)
+        result = subprocess.run(["ip", "-6", "addr", "show", "dev", "azumi"], capture_output=True, text=True)
         if ip_addr in result.stdout:
             print(f"IP address {ip_addr} already exists. Skipping...")
         else:
-            subprocess.run(["ip", "-6", "addr", "add", ip_addr, "dev", "eliss"], stdout=subprocess.DEVNULL)
+            subprocess.run(["ip", "-6", "addr", "add", ip_addr, "dev", "azumi"], stdout=subprocess.DEVNULL)
     
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip -6 addr add 2001:831b::2/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip -6 addr add 2001:831b::2/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
         for i in range(1, num_ips + 1):
             ip_suffix = hex(i)[2:]
             ip_addr = f"2001:83{ip_suffix}b::2/64"
-            f.write(f"ip -6 addr add {ip_addr} dev eliss\n")
+            f.write(f"ip -6 addr add {ip_addr} dev azumi\n")
     answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
     if answer.lower() in ['yes', 'y']:
         interface = ipv6_int()
@@ -22277,7 +22320,7 @@ def iran_private_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22611,23 +22654,23 @@ def gre6_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::1"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -22650,7 +22693,7 @@ def gre6_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n" 
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n" 
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22714,7 +22757,7 @@ def gre6_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -22738,24 +22781,24 @@ def kharej1_gre6_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22836,24 +22879,24 @@ def kharej_gre6_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::1/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -22962,23 +23005,23 @@ def gre6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     created_ips = []
     for i in range(2, num_additional_ips + 2):
         ip_address = f"2002:83{i}a::2"
         created_ips.append(ip_address)
-        command = f"echo 'ip -6 addr add {ip_address}/64 dev elissg6' >> {file_path}"
+        command = f"echo 'ip -6 addr add {ip_address}/64 dev azumig6' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -23001,7 +23044,7 @@ def gre6_iran_tunnel(remote_ip, local_ip, num_additional_ips):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -23068,7 +23111,7 @@ def gre6_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -23091,24 +23134,24 @@ def iran1_gre6_menu():
         os.remove("/etc/private.sh")
 
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -23191,24 +23234,24 @@ def iran_gre6_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "fd1d:fc98:b73e:b481::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev eliss\n")
-        f.write("ip -6 route add fd1d::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add fd1d:fc98:b73e:b481::2/64 dev azumi\n")
+        f.write("ip -6 route add fd1d::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -23340,7 +23383,7 @@ def gre_iran():
     interval = 20
     gre_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
     
@@ -23362,7 +23405,7 @@ def gre_kharej():
     interval = 20
     gre_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
     
@@ -23429,23 +23472,23 @@ def kharej_gre_menu():
     command = f"echo '/sbin/modprobe gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip tunnel add elissg mode gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip tunnel add azumig mode gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add {ipv6}/16 dev elissg' >> {file_path}"
+    command = f"echo 'ip addr add {ipv6}/16 dev azumig' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg up' >> {file_path}"
+    command = f"echo 'ip link set azumig up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     
 
     for i in range(2, num_additional_ips + 2):
         ip_address = f"{ipv6[:-1]}{i}/16"  
-        command = f"echo 'ip addr add {ip_address} dev elissg' >> {file_path}"
+        command = f"echo 'ip addr add {ip_address} dev azumig' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -23468,7 +23511,7 @@ def kharej_gre_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig mtu {mtu_value}\n"
         with open('/etc/gre.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -23538,22 +23581,22 @@ def iran_gre_menu():
     command = f"echo '/sbin/modprobe gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip tunnel add elissg mode gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip tunnel add azumig mode gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip addr add {ipv6}/16 dev elissg' >> {file_path}"
+    command = f"echo 'ip addr add {ipv6}/16 dev azumig' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg up' >> {file_path}"
+    command = f"echo 'ip link set azumig up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
 
     for i in range(2, num_additional_ips + 2):
         ip_address = f"{ipv6[:-1]}{i}/16"  
-        command = f"echo 'ip addr add {ip_address} dev elissg' >> {file_path}"
+        command = f"echo 'ip addr add {ip_address} dev azumig' >> {file_path}"
         subprocess.run(command, shell=True, check=True)
 
 
@@ -23576,7 +23619,7 @@ def iran_gre_menu():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig mtu {mtu_value}\n"
         with open('/etc/gre.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -23734,19 +23777,19 @@ def i6to4_kharej():
     with open("/etc/6to4.sh", "w") as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote {} local {} ttl 255\n".format(remote_ip, local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote {} local {} ttl 255\n".format(remote_ip, local_ip))
         
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
         
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via {} dev eliss6 metric 1\n".format(gateway))
-        f.write("ip -6 route add ::/0 dev eliss6\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via {} dev azumi6 metric 1\n".format(gateway))
+        f.write("ip -6 route add ::/0 dev azumi6\n")
         answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
         if answer.lower() in ['yes', 'y']:
             interface = ipv6_int()
@@ -23766,7 +23809,7 @@ def i6to4_kharej():
     with open("/etc/6to4.sh", "a") as f:
         for i in range(start_index, start_index + num_ips):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split(".")), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
 
     display_notification("\033[93mAdding cronjob!\033[0m")
       
@@ -23782,7 +23825,7 @@ def i6to4_kharej():
 
     sleep(1)
 
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(["ping6", "-c", "2", remote_prefix], capture_output=True, text=True).stdout.strip()
 
 
@@ -23896,16 +23939,16 @@ def i6to4_iran():
     with open("/etc/6to4.sh", "w") as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote {} local {} ttl 255\n".format(remote_ip, local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote {} local {} ttl 255\n".format(remote_ip, local_ip))
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via {} dev eliss6 metric 1\n".format(gateway))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via {} dev azumi6 metric 1\n".format(gateway))
         answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
         if answer.lower() in ['yes', 'y']:
             interface = ipv6_int()
@@ -23927,7 +23970,7 @@ def i6to4_iran():
     with open("/etc/6to4.sh", "a") as f:
         for i in range(start_index, start_index + num_ips):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split(".")), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
 
     display_notification("\033[93mAdding cronjob!\033[0m")
 
@@ -23938,7 +23981,7 @@ def i6to4_iran():
 
     remote_ipv4 = input("\033[93mEnter \033[92mKharej IPv4 address\033[93m [Ping Service]: \033[0m")
 
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     remote_prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, remote_ipv4.split(".")))
 
     sleep(1)
@@ -24078,16 +24121,16 @@ def i6to4_any_kharej():
     with open('/etc/6to4.sh', 'w') as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote any local {} ttl 255\n".format(local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote any local {} ttl 255\n".format(local_ip))
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev eliss6 metric 1\n")
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev azumi6 metric 1\n")
         
     num_ips = input("\033[93mHow many \033[92madditional IPs\033[93m do you need? \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -24097,7 +24140,7 @@ def i6to4_any_kharej():
     with open('/etc/6to4.sh', 'a') as f:
         for i in range(start_index, start_index + int(num_ips)):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split('.')), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
     
     display_notification("\033[93mAdding cronjob!\033[0m")
 
@@ -24110,7 +24153,7 @@ def i6to4_any_kharej():
     
     remote_prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, remote_ipv4.split('.')))
     sleep(1)
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
     
     print(ping_result)
@@ -24206,16 +24249,16 @@ def i6to4_any_iran():
     with open('/etc/6to4.sh', 'w') as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote any local {} ttl 255\n".format(local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote any local {} ttl 255\n".format(local_ip))
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev eliss6 metric 1\n")
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev azumi6 metric 1\n")
         answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
         if answer.lower() in ['yes', 'y']:
             interface = ipv6_int()
@@ -24235,7 +24278,7 @@ def i6to4_any_iran():
     with open('/etc/6to4.sh', 'a') as f:
         for i in range(start_index, start_index + num_ips):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split('.')), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
 
     display_notification("\033[93mAdding cronjob!\033[0m")
 
@@ -24248,7 +24291,7 @@ def i6to4_any_iran():
     remote_prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, remote_ipv4.split('.')))
 
     subprocess.run(['sleep', '1'])
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
     print(ping_result)
 
@@ -24410,20 +24453,20 @@ def ipgen_ipk_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24431,7 +24474,7 @@ def ipgen_ipk_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -24494,18 +24537,18 @@ def ipgen_ipk_version2():
     config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24513,7 +24556,7 @@ def ipgen_ipk_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -24608,20 +24651,20 @@ def ipgen_ipi_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24629,7 +24672,7 @@ def ipgen_ipi_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -24692,18 +24735,18 @@ def ipgen_ipi_version2():
     config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24711,7 +24754,7 @@ def ipgen_ipi_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -24832,7 +24875,7 @@ def configm2_strongsw_simkh1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -24867,20 +24910,20 @@ def ipgenm2_ipk_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     configm2_strongsw_simkh1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24888,7 +24931,7 @@ def ipgenm2_ipk_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -24949,18 +24992,18 @@ def ipgenm2_ipk_version2():
     configm2_strongsw_simkh1(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -24968,7 +25011,7 @@ def ipgenm2_ipk_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25028,7 +25071,7 @@ def configm2_strongsw_simih1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -25094,20 +25137,20 @@ def ipgenm2_ipi_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     configm2_strongsw_simih1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -25115,7 +25158,7 @@ def ipgenm2_ipi_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25176,18 +25219,18 @@ def ipgenm2_ipi_version2():
     configm2_strongsw_simih1(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -25195,7 +25238,7 @@ def ipgenm2_ipi_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25317,7 +25360,7 @@ def configm31_strongsw_simk1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -25351,7 +25394,7 @@ def configm32_strongsw_simk1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -25472,7 +25515,7 @@ def install_icmp4():
 def icmp41_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "70.0.0.2"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -25522,7 +25565,7 @@ def start_ic4_kharej():
 def icmp42_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "70.0.0.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -25608,26 +25651,26 @@ def icmpv4_spn_kharej():
 def icmp4_simpk1():
    
     start_ic4_kharej()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25678,24 +25721,24 @@ done
 def icmp4_simk2():
   
     start_ic4_kharej()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25781,26 +25824,26 @@ def icmp4_simpi1():
       
     start_ic4_iran()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -25852,25 +25895,25 @@ def icmp4_simpi2():
     
     start_ic4_iran()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26151,26 +26194,26 @@ def icmpv4m2_spn_kharej():
 def icmp4m2_simpk1():
    
     startm2_ic4_kharej1()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26221,24 +26264,24 @@ done
 def icmp4m2_simk2():
   
     startm2_ic4_kharej2()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.1", "remote", "70.0.0.2", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.1 remote 70.0.0.2 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26324,26 +26367,26 @@ def icmp4m2_simpi1():
       
     startm2_ic4_iran1()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26395,25 +26438,25 @@ def icmp4m2_simpi2():
     
     startm2_ic4_iran2()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "70.0.0.2", "remote", "70.0.0.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 70.0.0.2 remote 70.0.0.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26472,7 +26515,7 @@ def config_strongsw_icmp4k1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -26505,7 +26548,7 @@ def config_strongsw_icmp4k2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -26538,7 +26581,7 @@ def config_strongsw_icmp4i1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -26570,7 +26613,7 @@ def config_strongsw_icmp4i2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -26605,20 +26648,20 @@ def ipgenm3_ipk_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     configm31_strongsw_simk1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -26626,7 +26669,7 @@ def ipgenm3_ipk_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26687,18 +26730,18 @@ def ipgenm3_ipk_version2():
     configm32_strongsw_simk1(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -26706,7 +26749,7 @@ def ipgenm3_ipk_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26766,7 +26809,7 @@ def configm31_strongsw_simi1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -26801,7 +26844,7 @@ def configm32_strongsw_simi1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -26867,20 +26910,20 @@ def ipgenm3_ipi_version1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m")
     configm31_strongsw_simi1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -26888,7 +26931,7 @@ def ipgenm3_ipi_version1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -26949,18 +26992,18 @@ def ipgenm3_ipi_version2():
     configm32_strongsw_simi1(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::2/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::2/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -26968,7 +27011,7 @@ def ipgenm3_ipi_version2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -27106,7 +27149,7 @@ def hanss_install_menu():
 def icmp3_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.100"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -27133,10 +27176,10 @@ def hns_icmp_kharej1():
     hans_directory = "/root/hans-1.1"
 
     os.chdir(hans_directory)
-    os.system(f"./hans -s 80.1.2.0 -p eliss86chwan -d icmp")
+    os.system(f"./hans -s 80.1.2.0 -p azumi86chwan -d icmp")
 
 
-    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p eliss86chwan -d icmp"
+    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_kharej_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27160,7 +27203,7 @@ def hns_icmp_kharej1():
 def icmp4_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -27186,12 +27229,12 @@ def hns_icmp_iran1():
 
 
     os.chdir("/root/hans-1.1")
-    os.system(f"./hans -c {remote_ip} -p eliss86chwan -d icmp")
+    os.system(f"./hans -c {remote_ip} -p azumi86chwan -d icmp")
 
 
     subprocess.call(["rm", "-f", "/etc/cron.d/hans"])
 
-    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p eliss86chwan -d icmp"
+    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27247,26 +27290,26 @@ def hanz_spn_kharej():
 def hanz_simpk1():
    
     hns_icmp_kharej1()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -27317,24 +27360,24 @@ done
 def hanz_simk2():
   
     hns_icmp_kharej1()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -27420,26 +27463,26 @@ def hanz_simpi1():
       
     hns_icmp_iran1()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -27491,25 +27534,25 @@ def hanz_simpi2():
     
     hns_icmp_iran1()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -27569,7 +27612,7 @@ def config_strongsw_hanzk1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -27602,7 +27645,7 @@ def config_strongsw_hanzk2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -27682,7 +27725,7 @@ def hanss_install_menu():
 def icmp3_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.100"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -27703,10 +27746,10 @@ def hns2_icmp_kharej1():
     hans_directory = "/root/hans-1.1"
 
     os.chdir(hans_directory)
-    os.system(f"./hans -s 80.1.2.0 -p eliss86chwan -d icmp")
+    os.system(f"./hans -s 80.1.2.0 -p azumi86chwan -d icmp")
 
 
-    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p eliss86chwan -d icmp"
+    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_kharej_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27735,10 +27778,10 @@ def hns3_icmp_kharej1():
     hans_directory = "/root/hans-1.1"
 
     os.chdir(hans_directory)
-    os.system(f"./hans -s 80.1.2.0 -p eliss86chwan -d icmp")
+    os.system(f"./hans -s 80.1.2.0 -p azumi86chwan -d icmp")
 
 
-    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p eliss86chwan -d icmp"
+    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_kharej_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27758,7 +27801,7 @@ def hns3_icmp_kharej1():
 def icmp4_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -27778,7 +27821,7 @@ def config_strongsw_hanzi1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -27811,7 +27854,7 @@ def config_strongsw_hanzi2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -27849,12 +27892,12 @@ def hns2_icmp_iran1():
 
 
     os.chdir("/root/hans-1.1")
-    os.system(f"./hans -c {remote_ip} -p eliss86chwan -d icmp")
+    os.system(f"./hans -c {remote_ip} -p azumi86chwan -d icmp")
 
 
     subprocess.call(["rm", "-f", "/etc/cron.d/hans"])
 
-    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p eliss86chwan -d icmp"
+    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27882,12 +27925,12 @@ def hns3_icmp_iran1():
 
 
     os.chdir("/root/hans-1.1")
-    os.system(f"./hans -c {remote_ip} -p eliss86chwan -d icmp")
+    os.system(f"./hans -c {remote_ip} -p azumi86chwan -d icmp")
 
 
     subprocess.call(["rm", "-f", "/etc/cron.d/hans"])
 
-    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p eliss86chwan -d icmp"
+    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -27937,26 +27980,26 @@ def hanz2_spn_kharej():
 def hanz2_simpk1():
    
     hns2_icmp_kharej1()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28007,24 +28050,24 @@ done
 def hanz2_simk2():
   
     hns3_icmp_kharej1()
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.1", "remote", "80.1.2.100", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.1 remote 80.1.2.100 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28110,26 +28153,26 @@ def hanz2_simpi1():
       
     hns2_icmp_iran1()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissespn\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumiespn\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumiespn\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28181,25 +28224,25 @@ def hanz2_simpi2():
     
     hns3_icmp_iran1()
 
-    subprocess.run(["sudo", "ip", "link", "add", "dev", "elissespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissespn", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissespn"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "dev", "azumiespn", "type", "erspan", "local", "80.1.2.100", "remote", "80.1.2.1", "seq", "key", "100", "erspan_ver", "1", "erspan", "1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumiespn", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumiespn"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add dev elissespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
-        f.write("sudo ip link set elissespn up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissespn\n")
+        f.write(f"sudo ip link add dev azumiespn type erspan local 80.1.2.100 remote 80.1.2.1 seq key 100 erspan_ver 1 erspan 1\n")
+        f.write("sudo ip link set azumiespn up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumiespn\n")
 
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Erspan]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissespn mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumiespn mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28347,7 +28390,7 @@ def config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -28380,7 +28423,7 @@ def config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -28413,7 +28456,7 @@ def config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -28446,7 +28489,7 @@ def config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -28477,20 +28520,20 @@ def gen_simpk1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m") 
     config_strongsw_simk1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -28499,7 +28542,7 @@ def gen_simpk1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28558,18 +28601,18 @@ def gen_simpk2():
     config_strongsw_simk2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -28577,7 +28620,7 @@ def gen_simpk2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28670,20 +28713,20 @@ def gen_simpi1():
 
     config_strongsw_simi1(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -28691,7 +28734,7 @@ def gen_simpi1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28750,18 +28793,18 @@ def gen_simpi2():
 
     config_strongsw_simi2(local_ip, local_subnet, remote_ip, remote_subnet, psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -28770,7 +28813,7 @@ def gen_simpi2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -28891,7 +28934,7 @@ def configm2_strongsw_simk1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -28924,7 +28967,7 @@ def configm2_strongsw_simk2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -28957,7 +29000,7 @@ def configm2_strongsw_simi1(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=32
@@ -28990,7 +29033,7 @@ def configm2_strongsw_simi2(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=64
@@ -29019,20 +29062,20 @@ def genm2_simpk1():
     psk = input("\033[93mEnter the \033[92mSecret key\033[93m: \033[0m") 
     configm2_strongsw_simk1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -29041,7 +29084,7 @@ def genm2_simpk1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -29098,18 +29141,18 @@ def genm2_simpk2():
     configm2_strongsw_simk2(psk)
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::1/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add 2001:db8::1/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add 2001:db8::1/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -29117,7 +29160,7 @@ def genm2_simpk2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -29207,20 +29250,20 @@ def genm2_simpi1():
 
     configm2_strongsw_simi1(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -29228,7 +29271,7 @@ def genm2_simpi1():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -29284,18 +29327,18 @@ def genm2_simpi2():
 
     configm2_strongsw_simi2(psk)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "2001:db8::2/64", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/spn.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 2001:db8::2/64 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 2001:db8::2/64 dev azumigen\n")
         f.write("systemctl restart strongswan-starter\n")
         f.write("systemctl restart strongswan\n")
 
@@ -29304,7 +29347,7 @@ def genm2_simpi2():
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/spn.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -29498,7 +29541,7 @@ def ipsecs_uninstall():
         
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissespn > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumiespn > /dev/null", shell=True)
         devnull.close()   
         print("Progress: ", end="")
 
@@ -29533,7 +29576,7 @@ def config_strongsw_icmp(local_ip, local_subnet, remote_ip, remote_subnet, psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet={local_subnet}
@@ -29566,7 +29609,7 @@ def config_kharej_icmp(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=24
@@ -29599,7 +29642,7 @@ def config_iran_icmp(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=24
@@ -29746,7 +29789,7 @@ def install_icmp():
 def icmp1_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "70.0.0.2"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -29845,7 +29888,7 @@ def start_ic_kharej3():
 def icmp2_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "70.0.0.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -30081,7 +30124,7 @@ def hanss_install_menu():
 def icmp3_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.100"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -30106,10 +30149,10 @@ def hns_icmp_kharej1():
     hans_directory = "/root/hans-1.1"
 
     os.chdir(hans_directory)
-    os.system(f"./hans -s 80.1.2.0 -p eliss86chwan -d icmp")
+    os.system(f"./hans -s 80.1.2.0 -p azumi86chwan -d icmp")
 
 
-    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p eliss86chwan -d icmp"
+    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_kharej_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -30133,7 +30176,7 @@ def hns_icmp_kharej1():
 def icmp4_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         result = subprocess.run(["ping", "-c", "2", "80.1.2.1"], capture_output=True, text=True)
         if result.returncode == 0:
             print(result.stdout)
@@ -30159,12 +30202,12 @@ def hns_icmp_iran1():
 
 
     os.chdir("/root/hans-1.1")
-    os.system(f"./hans -c {remote_ip} -p eliss86chwan -d icmp")
+    os.system(f"./hans -c {remote_ip} -p azumi86chwan -d icmp")
 
 
     subprocess.call(["rm", "-f", "/etc/cron.d/hans"])
 
-    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p eliss86chwan -d icmp"
+    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -30222,7 +30265,7 @@ def config_hansk_icmp(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=24
@@ -30255,7 +30298,7 @@ def config_hansi_icmp(psk):
 
     with open("/etc/ipsec.conf", "w") as f:
         f.write(f'''config setup
-##elissisinyouarea
+##azumiisinyouarea
 conn ipsecsit
   left=%defaultroute
   leftsubnet=24
@@ -30290,10 +30333,10 @@ def hns_icmp_kharej2():
     hans_directory = "/root/hans-1.1"
 
     os.chdir(hans_directory)
-    os.system(f"./hans -s 80.1.2.0 -p eliss86chwan -d icmp")
+    os.system(f"./hans -s 80.1.2.0 -p azumi86chwan -d icmp")
 
 
-    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p eliss86chwan -d icmp"
+    hans_kharej_command = f"{hans_directory}/hans -s 80.1.2.0 -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_kharej_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -30328,12 +30371,12 @@ def hns_icmp_iran2():
 
 
     os.chdir("/root/hans-1.1")
-    os.system(f"./hans -c {remote_ip} -p eliss86chwan -d icmp")
+    os.system(f"./hans -c {remote_ip} -p azumi86chwan -d icmp")
 
 
     subprocess.call(["rm", "-f", "/etc/cron.d/hans"])
 
-    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p eliss86chwan -d icmp"
+    hans_command = f"/root/hans-1.1/hans -c {remote_ip} -p azumi86chwan -d icmp"
     subprocess.run(["sed", "-i", f"/{hans_command}/d", "/etc/hans.sh"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, check=False)
 
     if os.path.exists("/etc/hans.sh"):
@@ -30444,7 +30487,7 @@ def ipsecs3_uninstall():
     subprocess.run("systemctl stop ping_espan.service > /dev/null 2>&1", shell=True, stdout=devnull, stderr=devnull)
     subprocess.run("rm /etc/systemd/system/ping_espan.service > /dev/null 2>&1", shell=True, stdout=devnull, stderr=devnull)
     subprocess.run("systemctl daemon-reload", shell=True, stdout=devnull, stderr=devnull)
-    subprocess.run("sudo ip link delete elissespn > /dev/null", shell=True, stdout=devnull, stderr=devnull)
+    subprocess.run("sudo ip link delete azumiespn > /dev/null", shell=True, stdout=devnull, stderr=devnull)
     subprocess.run("apt purge strongswan -y", shell=True)
 
     devnull.close()
@@ -30465,7 +30508,7 @@ def remove2_hans():
 
         display_notification("\033[93mRemoving cronjob...\033[0m")
         subprocess.run("crontab -l | grep -v \"@reboot /bin/bash /etc/hans.sh\" | crontab -", shell=True)
-        subprocess.run("rm /etc/systemd/system/elissfrps1.service > /dev/null 2>&1", shell=True)
+        subprocess.run("rm /etc/systemd/system/azumifrps1.service > /dev/null 2>&1", shell=True)
 
         subprocess.run("systemctl daemon-reload", shell=True)
         subprocess.run("ip link set dev icmp down > /dev/null", shell=True)
@@ -30564,7 +30607,7 @@ def gre6tapespn_uninstall():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissespn > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumiespn > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -30614,8 +30657,8 @@ def gre6test_uninstall():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissespn > /dev/null", shell=True)
-        subprocess.run("sudo ip link delete elissip6 > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumiespn > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumip6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -30660,7 +30703,7 @@ def espn_uninstall():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissespn > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumiespn > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -30919,26 +30962,26 @@ def geneve_icmpk_version1():
     ufw("70.0.0.1")
     ufw("70.0.0.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "70.0.0.2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "70.0.0.2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True)
@@ -30996,24 +31039,24 @@ def geneve_icmpk_version2():
     prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, ipv4.split('.')))
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "70.0.0.2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "70.0.0.2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31092,26 +31135,26 @@ def geneve_icmpi_version1():
     ufw("70.0.0.1")
     ufw("70.0.0.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "70.0.0.1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "70.0.0.1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31168,24 +31211,24 @@ def geneve_icmpi_version2():
     ipv4 = subprocess.run(['curl', '-s', 'https://api.ipify.org'], capture_output=True, text=True).stdout.strip()
     prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, ipv4.split('.')))
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "70.0.0.1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "70.0.0.1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31361,11 +31404,11 @@ def remove_ipip6():
         sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissip down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissip > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumip down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumip > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev eliss down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -31445,16 +31488,16 @@ def i6to41_any_kharej():
     with open('/etc/6to4.sh', 'w') as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote any local {} ttl 255\n".format(local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote any local {} ttl 255\n".format(local_ip))
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev eliss6 metric 1\n")
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev azumi6 metric 1\n")
         
     num_ips = input("\033[93mHow many \033[92madditional IPs\033[93m do you need? \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
@@ -31464,7 +31507,7 @@ def i6to41_any_kharej():
     with open('/etc/6to4.sh', 'a') as f:
         for i in range(start_index, start_index + int(num_ips)):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split('.')), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
     
     display_notification("\033[93mAdding cronjob!\033[0m")
 
@@ -31488,7 +31531,7 @@ def i6to41_any_kharej():
     
         remote_prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, remote_ipv4.split('.')))
         sleep(1)
-        print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+        print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
         ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
         print(ping_result)
 
@@ -31559,16 +31602,16 @@ def gree6_tunnel(remote_ip, local_ip):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -31590,7 +31633,7 @@ def gree6_tunnel(remote_ip, local_ip):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31606,7 +31649,7 @@ def gree6_kharej():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -31635,24 +31678,24 @@ def kharej_gree6_menu():
     remote_ip = input("\033[93mEnter \033[92mIRAN\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add 2001:831b::1/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add 2001:831b::1/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31726,16 +31769,16 @@ def gree6_iran_tunnel(remote_ip, local_ip):
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -31758,7 +31801,7 @@ def gree6_iran_tunnel(remote_ip, local_ip):
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31780,7 +31823,7 @@ def gree6_iran():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)
@@ -31810,24 +31853,24 @@ def iran_gree6_menu():
     remote_ip = input("\033[93mEnter \033[92mKharej\033[93m IPV4 address: \033[0m")
     print("\033[93m╰─────────────────────────────────────────────────────────╯\033[0m")
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "sit", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
-        f.write(f"ip tunnel add eliss mode sit remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip link set dev eliss up\n")
-        f.write("ip addr add 2001:831b::2/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip tunnel add azumi mode sit remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip link set dev azumi up\n")
+        f.write("ip addr add 2001:831b::2/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -31936,24 +31979,24 @@ def kharej_gree61_menu():
     ufw("2001:831b::2")
     ufw("2001:831b::1")	
 
-    subprocess.run(["ip", "tunnel", "add", "eliss", "mode", "ip6ip6", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "tunnel", "add", "azumi", "mode", "ip6ip6", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::1/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe ipip\n")
-        f.write(f"ip -6 tunnel add eliss mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip -6 link set dev eliss up\n")
-        f.write("ip -6 addr add 2001:831b::1/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip -6 tunnel add azumi mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip -6 link set dev azumi up\n")
+        f.write("ip -6 addr add 2001:831b::1/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32028,24 +32071,24 @@ def iran_gree61_menu():
     ufw("2001:831b::2")
     ufw("2001:831b::1")
 
-    subprocess.run(["ip", "-6", "tunnel", "add", "eliss", "mode", "ip6ip6", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
-    subprocess.run(["ip", "-6", "link", "set", "dev", "eliss", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "tunnel", "add", "azumi", "mode", "ip6ip6", "remote", remote_ip, "local", local_ip, "ttl", "255"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "-6", "link", "set", "dev", "azumi", "up"], stdout=subprocess.DEVNULL)
 
     initial_ip = "2001:831b::2/64"
-    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "eliss"], stdout=subprocess.DEVNULL)
+    subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumi"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/private.sh", "w") as f:
         f.write("/sbin/modprobe ipip\n")
-        f.write(f"ip -6 tunnel add eliss mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n")
-        f.write("ip -6 link set dev eliss up\n")
-        f.write("ip -6 addr add 2001:831b::2/64 dev eliss\n")
-        f.write("ip -6 route add 2001::/16 dev eliss\n")
+        f.write(f"ip -6 tunnel add azumi mode ip6ip6 remote {remote_ip} local {local_ip} ttl 255\n")
+        f.write("ip -6 link set dev azumi up\n")
+        f.write("ip -6 addr add 2001:831b::2/64 dev azumi\n")
+        f.write("ip -6 route add 2001::/16 dev azumi\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [6to4]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev eliss mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumi mtu {mtu_value}\n"
         with open("/etc/private.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32111,16 +32154,16 @@ def gree61_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote 2001:831b::2 local 2001:831b::1 ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote 2001:831b::2 local 2001:831b::1 ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -32130,7 +32173,7 @@ def gree61_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32144,7 +32187,7 @@ def gree61_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -32160,16 +32203,16 @@ def gree61_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote 2001:831b::1 local 2001:831b::2 ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote 2001:831b::1 local 2001:831b::2 ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -32180,7 +32223,7 @@ def gree61_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32198,7 +32241,7 @@ def gree61_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -32257,26 +32300,26 @@ def geneve_gerk1_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32335,24 +32378,24 @@ def geneve_gerk1_version2():
     ufw("2002:831a::2")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32431,26 +32474,26 @@ def geneve_geri1_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32508,24 +32551,24 @@ def geneve_geri1_version2():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -32664,16 +32707,16 @@ def gree6r_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -32693,7 +32736,7 @@ def gree6r_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
 
@@ -32706,7 +32749,7 @@ def gree6r_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -32720,26 +32763,26 @@ def geneve_gerkr_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
 
@@ -32797,24 +32840,24 @@ def geneve_gerkr_version2():
     ufw("2002:831a::2")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
 
@@ -32898,16 +32941,16 @@ def gree6r_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -32928,7 +32971,7 @@ def gree6r_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
     sleep(1)
@@ -32944,7 +32987,7 @@ def gree6r_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -32958,26 +33001,26 @@ def geneve_gerir_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
 
@@ -33034,24 +33077,24 @@ def geneve_gerir_version2():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
 
@@ -33165,7 +33208,7 @@ def genf2_ip():
 def genkh_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.2.1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -33174,7 +33217,7 @@ def genkh_ping():
 def genir_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.1.1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -33250,24 +33293,24 @@ def kharej1_gen_menu():
 
 
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
  
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
         
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33343,24 +33386,24 @@ def iran1_gen_menu():
     
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
  
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
     
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33484,24 +33527,24 @@ def geneve_gerk6_version2():
 
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33586,24 +33629,24 @@ def geneve_geri5_version2():
     prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, ipv4.split('.')))
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33671,16 +33714,16 @@ def gree6_kharej1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::1/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
     command = f"chmod +x {file_path}"
@@ -33690,7 +33733,7 @@ def gree6_kharej1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33704,7 +33747,7 @@ def gree6_kharej1():
     ip_address = "2002:831a::2" #iranip
     max_pings = 3
     interval = 20
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     create_ping_script(ip_address, max_pings, interval)
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)   
@@ -33726,16 +33769,16 @@ def gree6_iran1_tunnel():
     command = f"echo '/sbin/modprobe ip6_gre' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 tunnel add elissg6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
+    command = f"echo 'ip -6 tunnel add azumig6 mode ip6gre remote {remote_ip} local {local_ip} ttl 255' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
-    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 addr add 2002:831a::2/64 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip link set elissg6 up' >> {file_path}"
+    command = f"echo 'ip link set azumig6 up' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
     
-    command = f"echo 'ip -6 route add 2002::/16 dev elissg6' >> {file_path}"
+    command = f"echo 'ip -6 route add 2002::/16 dev azumig6' >> {file_path}"
     subprocess.run(command, shell=True, check=True)
 
 
@@ -33746,7 +33789,7 @@ def gree6_iran1_tunnel():
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [GRE6]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
     if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
         mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-        mtu_command = f"ip link set dev elissg6 mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumig6 mtu {mtu_value}\n"
         with open('/etc/gre6.sh', 'a') as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33764,7 +33807,7 @@ def gree6_iran1():
     interval = 20
     iran_ping_script(ip_address, max_pings, interval)
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
-    print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+    print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     ping_result = subprocess.run(['ping6', '-c', '2', ip_address], capture_output=True, text=True).stdout.strip()
     print(ping_result)    
@@ -33796,26 +33839,26 @@ def geneve_gerk_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33874,24 +33917,24 @@ def geneve_gerk_version2():
     ufw("2002:831a::2")
 
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::2"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::2\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::2\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -33970,26 +34013,26 @@ def geneve_geri_version1():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34047,24 +34090,24 @@ def geneve_geri_version2():
     ufw("2002:831a::1")
     ufw("2002:831a::2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", "2002:831a::1"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote 2002:831a::1\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote 2002:831a::1\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34117,7 +34160,7 @@ done
     
     print("\033[92mIRAN Server Configuration Completed!\033[0m") 
 
-##eliss native
+##azumi native
 def gen2_ip():
     os.system("clear")
     print('\033[92m ^ ^\033[0m')
@@ -34170,24 +34213,24 @@ def geneve_nk_version1():
     ufw("80.200.1.1")
     ufw("80.200.1.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/30", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/30", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/30 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/30 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34244,24 +34287,24 @@ def geneve_nk_version2():
 
     ufw(remote_ip)
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34340,24 +34383,24 @@ def geneve_ni_version1():
     ufw("80.200.1.1")
     ufw("80.200.1.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.2/30", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.2/30", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.2/30 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.2/30 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34414,24 +34457,24 @@ def geneve_ni_version2():
 
     ufw(remote_ip)
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34573,7 +34616,7 @@ def gen_ipm1():
 def genkhm1_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.2.1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -34581,7 +34624,7 @@ def genkhm1_ping():
 def genkhm2_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.1.2"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
@@ -34589,14 +34632,14 @@ def genkhm2_ping():
 def genirm1_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.1.1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)
 def genirm2_ping():
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     try:
-        print("\033[96mPlease Wait, eliss is pinging...")
+        print("\033[96mPlease Wait, Azumi is pinging...")
         subprocess.run(["ping", "-c", "2", "80.200.1.1"], check=True, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print(Fore.LIGHTRED_EX + "Pinging failed:", e, Style.RESET_ALL)   
@@ -34679,26 +34722,26 @@ def geneve_ipk_version1():
     ufw("80.200.1.1")
     ufw("80.200.2.1")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.2.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.2.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34754,24 +34797,24 @@ def geneve_ipk_version2():
 
     ufw(remote_ip)
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34864,24 +34907,24 @@ def geneve_ipk1_version1():
     ufw("80.200.1.1")
     ufw("80.200.1.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/30", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.1/30", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.1/30 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.1/30 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -34937,24 +34980,24 @@ def geneve_ipk1_version2():
 
     ufw(remote_ip)
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -35045,26 +35088,26 @@ def geneve_ip_version1():
     ufw("80.200.1.1")
     ufw("80.200.2.1")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.2.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "route", "add", "80.200.1.1/32", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.2.1/32 dev elissgen\n")
-        f.write("sudo ip route add 80.200.1.1/32 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.2.1/32 dev azumigen\n")
+        f.write("sudo ip route add 80.200.1.1/32 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -35121,24 +35164,24 @@ def geneve_ip_version2():
 
     ufw(remote_ip)
 
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -35229,24 +35272,24 @@ def geneve_ipi_version1():
     ufw("80.200.1.1")
     ufw("80.200.1.2")
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.2/30", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", "80.200.1.2/30", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write("sudo ip addr add 80.200.1.2/30 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write("sudo ip addr add 80.200.1.2/30 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -35303,24 +35346,24 @@ def geneve_ipi_version2():
 
     ufw(remote_ip)
     
-    subprocess.run(["sudo", "ip", "link", "add", "name", "elissgen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "link", "set", "elissgen", "up"], stdout=subprocess.DEVNULL)
-    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "elissgen"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "add", "name", "azumigen", "type", "geneve", "id", "1000", "remote", remote_ip], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "link", "set", "azumigen", "up"], stdout=subprocess.DEVNULL)
+    subprocess.run(["sudo", "ip", "addr", "add", prefix+"/16", "dev", "azumigen"], stdout=subprocess.DEVNULL)
 
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
     display_notification("\033[93mAdding commands...\033[0m")
     print("\033[93m─────────────────────────────────────────────────────────\033[0m")
 
     with open("/etc/sys.sh", "w") as f:
-        f.write(f"sudo ip link add name elissgen type geneve id 1000 remote {remote_ip}\n")
-        f.write("sudo ip link set elissgen up\n")
-        f.write(f"sudo ip addr add {prefix}/16 dev elissgen\n")
+        f.write(f"sudo ip link add name azumigen type geneve id 1000 remote {remote_ip}\n")
+        f.write("sudo ip link set azumigen up\n")
+        f.write(f"sudo ip addr add {prefix}/16 dev azumigen\n")
 
     set_mtu = input("\033[93mDo you want to set the \033[92mMTU\033[96m [Geneve]\033[93m? (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m")
 
     if set_mtu.lower() == "yes" or set_mtu.lower() == "y":
         mtu_value = input("\033[93mEnter the desired\033[92m MTU value\033[93m: \033[0m")
-        mtu_command = f"ip link set dev elissgen mtu {mtu_value}\n"
+        mtu_command = f"ip link set dev azumigen mtu {mtu_value}\n"
         with open("/etc/sys.sh", "a") as f:
             f.write(mtu_command)
         subprocess.run(mtu_command, shell=True, check=True)
@@ -35423,16 +35466,16 @@ def i6to41_any_iran():
     with open('/etc/6to4.sh', 'w') as f:
         f.write("#!/bin/bash\n")
         f.write("/sbin/modprobe sit\n")
-        f.write("/sbin/ip tunnel add eliss6 mode sit remote any local {} ttl 255\n".format(local_ip))
+        f.write("/sbin/ip tunnel add azumi6 mode sit remote any local {} ttl 255\n".format(local_ip))
         set_mtu = input('\033[93mDo you want to set \033[92m MTU?\033[93m (\033[92myes\033[93m/\033[91mno\033[93m): \033[0m')
         if set_mtu.lower() == 'yes' or set_mtu.lower() == 'y':
             mtu_value = input('\033[93mEnter the desired \033[92mMTU value\033[93m: \033[0m')
-            f.write("/sbin/ip -6 link set dev eliss6 mtu {}\n".format(mtu_value))
+            f.write("/sbin/ip -6 link set dev azumi6 mtu {}\n".format(mtu_value))
         else:
-            f.write("/sbin/ip -6 link set dev eliss6 mtu 1480\n")
-        f.write("/sbin/ip link set dev eliss6 up\n")
-        f.write("/sbin/ip -6 addr add {}/16 dev eliss6\n".format(prefix))
-        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev eliss6 metric 1\n")
+            f.write("/sbin/ip -6 link set dev azumi6 mtu 1480\n")
+        f.write("/sbin/ip link set dev azumi6 up\n")
+        f.write("/sbin/ip -6 addr add {}/16 dev azumi6\n".format(prefix))
+        f.write("/sbin/ip -6 route add 2000::/3 via ::192.88.99.1 dev azumi6 metric 1\n")
         answer = input("\033[93mDo you want to change the \033[92mdefault route\033[93m? (\033[92my\033[93m/\033[91mn\033[93m)\033[0m ")
         if answer.lower() in ['yes', 'y']:
             interface = ipv6_int()
@@ -35452,7 +35495,7 @@ def i6to41_any_iran():
     with open('/etc/6to4.sh', 'a') as f:
         for i in range(start_index, start_index + num_ips):
             ip_addr = "2002:{:02x}{:02x}:{:02x}{:02x}::{:02x}/16".format(*map(int, ipv4.split('.')), i)
-            f.write("ip -6 addr add {} dev eliss6\n".format(ip_addr))
+            f.write("ip -6 addr add {} dev azumi6\n".format(ip_addr))
 
     display_notification("\033[93mAdding cronjob!\033[0m")
 
@@ -35476,7 +35519,7 @@ def i6to41_any_iran():
     
         remote_prefix = "2002:{:02x}{:02x}:{:02x}{:02x}::1".format(*map(int, remote_ipv4.split('.')))
         sleep(1)
-        print('\033[92m(\033[96mPlease wait,eliss is pinging...\033[0m')
+        print('\033[92m(\033[96mPlease wait,Azumi is pinging...\033[0m')
         ping_result = subprocess.run(['ping6', '-c', '2', remote_prefix], capture_output=True, text=True).stdout.strip()
         print(ping_result)
 
@@ -35558,8 +35601,8 @@ def remove_6to4():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev eliss6 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss6 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi6 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -35617,8 +35660,8 @@ def remove_6to41():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev eliss6 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss6 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi6 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -35661,8 +35704,8 @@ def remove_gre():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("ip link set dev elissg down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig > /dev/null", shell=True)
 
 
         print("Progress: ", end="")
@@ -35713,11 +35756,11 @@ def remove_gre6():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi > /dev/null", shell=True)
         sleep(1)
-        subprocess.run("ip link set dev elissg6 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg6 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig6 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -35756,8 +35799,8 @@ def remove_gre621():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev elissg6 down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del elissg6 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig6 down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumig6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -35796,8 +35839,8 @@ def remove_gre6tap21():
         time.sleep(1)
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev elissg6 down > /dev/null", shell=True)
-        subprocess.run("ip link delete elissg6 > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumig6 down > /dev/null", shell=True)
+        subprocess.run("ip link delete azumig6 > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -35840,8 +35883,8 @@ def remove_private():
         
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("ip link set dev eliss down > /dev/null", shell=True)
-        subprocess.run("ip tunnel del eliss > /dev/null", shell=True)
+        subprocess.run("ip link set dev azumi down > /dev/null", shell=True)
+        subprocess.run("ip tunnel del azumi > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -35930,7 +35973,7 @@ def genz_uninstall():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -36003,7 +36046,7 @@ def gen4_uninstall():
 
         subprocess.run("systemctl daemon-reload", shell=True)
 
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
 
         print("Progress: ", end="")
 
@@ -36066,7 +36109,7 @@ def gen2_uninstall():
   
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -36132,7 +36175,7 @@ def gen6_uninstall():
   
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -36180,7 +36223,7 @@ def gen3_uninstall():
   
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
@@ -36236,7 +36279,7 @@ def gen_icmp():
   
         subprocess.run("systemctl daemon-reload", shell=True)
         
-        subprocess.run("sudo ip link delete elissgen > /dev/null", shell=True)
+        subprocess.run("sudo ip link delete azumigen > /dev/null", shell=True)
         
         print("Progress: ", end="")
         
