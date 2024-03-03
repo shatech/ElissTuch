@@ -79,17 +79,15 @@ def display_logo2():
     \_____|\__,_|_|\__,_|\___|
 """ + colorama.Style.RESET_ALL
     print(logo2)
-    
-def display_logo():
-    colorama.init()  
+
 
 def main_menu():
     try:
         while True:
-            display_logo()
+            
             border = "\033[93m+" + "="*70 + "+\033[0m"
             content = "\033[93m║            ▌║█║▌│║▌│║▌║▌█║ \033[92mMain Menu\033[93m  ▌│║▌║▌│║║▌█║▌                  ║"
-            footer = " \033[92m    Open issues at \033[34mhttps://github.com/Shatech/6TO4-GRE-IPIP-SIT\033[0m "
+            footer = " \033[92m    Open issues at \033[34mhttps://github.com/Shatech\033[0m "
 
             border_length = len(border) - 2
             centered_content = content.center(border_length)
